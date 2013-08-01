@@ -1,0 +1,62 @@
+{% extends "template.html" %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <ul class="pagination pull-right">
+	<li>
+	  <a href="{{request.route_url('bill.list', _query={'page': data.first_page})}}">
+	    &lt;&lt;
+	  </a>
+	</li>
+	<li class="{{'disabled' if not data.previous_page}}">
+	  <a href="{% if data.previous_page %}{{request.route_url('bill.list', _query={'page': data.previous_page})}}{% else %}#{% endif %}">
+	    &lt;
+	  </a>
+	</li>
+	{% for page in range(start, end) %}
+	<li class="{{'active' if page == data.page}}">
+	  <a href="{{request.route_url('bill.list', _query={'page': page})}}">{{page}}</a>
+	</li>
+	{% endfor %}
+	<li class="{{'disabled' if not data.next_page}}">
+	  <a href="{% if data.next_page %}{{request.route_url('bill.list', _query={'page': data.next_page})}}{% else %}#{% endif %}">
+	    &gt;
+	  </a>
+	</li>
+	<li>
+	  <a href="{{request.route_url('bill.list', _query={'page': data.last_page})}}">
+	    &gt;&gt;
+	  </a>
+	</li>
+      </ul>
+    </div>	
+    <div class="row">
+      <div class="col-12">
+	<table class="table table-striped">
+	  <thead>
+	    <tr>
+	      <th>{% trans %}Bill{% endtrans %}</th>
+	      <th>Year</th>
+	      <th>Approved Date</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    {% for bill in data.items %}
+	    <tr>
+	      <td>
+		<a href="{{request.route_url('bill.detail', rev_id=bill['id'])}}">
+		  {{bill['text']}}
+		</a>
+	      </td>
+	      <td>{{bill['id'].split('_')[1]}}</td>
+	      <td>{{bill['item'][-2]['text'].split(':')[-1] if bill.get('item')}}</td>
+	    </tr>
+	    {% endfor %}
+	  </tbody>
+	</table>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
