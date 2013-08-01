@@ -12,7 +12,6 @@ requires = [
     'SQLAlchemy',
     'transaction',
     'pyramid_tm',
-    'pyramid_debugtoolbar',
     'zope.sqlalchemy',
     'waitress',
     'gunicorn',
@@ -45,6 +44,8 @@ setup(name='billwatcher',
       [paste.app_factory]
       main = billwatcher:main
       [console_scripts]
-      initialize_billwatcher_db = billwatcher.scripts.initializedb:main
+      db_backup = billwatcher.scripts.db_backup:main
+      db_flatten = billwatcher.scripts.db_flatten:main
+      db_doc_downloader = billwatcher.scripts.db_doc_downloader:main
       """,
       )

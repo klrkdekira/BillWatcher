@@ -20,9 +20,7 @@ def bill_list(request):
     records = request.db.bills.find().sort([['id', -1]])
     bills = []
 
-    import pprint
     for bill in records:
-        pprint.pprint(bill)
         # year = bill['id'].split('_')[-1]
         bills.extend(bill['item'])
 

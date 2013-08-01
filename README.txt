@@ -14,7 +14,6 @@ Getting Started
 
 TODO
 ----
-- Script to flatten existing mongodb data
 - Script to download PDF document
 - i18n
 - PDF viewer
