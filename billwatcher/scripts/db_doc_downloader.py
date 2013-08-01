@@ -4,7 +4,9 @@ import logging
 import datetime
 
 from urlparse import urlparse
+import requests
 import pymongo
+import gridfs
 
 from pyramid.paster import (
     get_appsettings,
@@ -34,5 +36,15 @@ def main(argv=sys.argv):
     )
 
     db = conn.billwatcher
+    fs = gridfs.GridFS(db)
+
     for bill in db.bills.find():
-        pass
+        document = bill.get('document')
+        if document:
+            filename = document['name']
+            url = document['url']
+            f = requests.get(url)
+            if f.status_code == 200:
+                log.info('Saving record...')
+                fs.put(f.content, filename=filename)
+    log.info('Done')

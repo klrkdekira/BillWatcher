@@ -18,7 +18,9 @@ requires = [
     'webhelpers',
     'simplejson',
     'Babel',
-    'lingua'
+    'lingua',
+    'ipython',
+    'requests'
     ]
 
 setup(name='billwatcher',

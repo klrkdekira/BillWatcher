@@ -14,7 +14,6 @@ Getting Started
 
 TODO
 ----
-- Script to download PDF document
 - i18n
 - PDF viewer
 - Search
