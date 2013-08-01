@@ -20,7 +20,8 @@ requires = [
     'Babel',
     'lingua',
     'ipython',
-    'requests'
+    'requests',
+    'gevent'
     ]
 
 setup(name='billwatcher',

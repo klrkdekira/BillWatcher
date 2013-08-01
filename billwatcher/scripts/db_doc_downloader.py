@@ -1,7 +1,9 @@
+from gevent import monkey; monkey.patch_all()
+import gevent
+from gevent import queue
 import os
 import sys
 import logging
-import datetime
 
 from urlparse import urlparse
 import requests
@@ -38,13 +40,36 @@ def main(argv=sys.argv):
     db = conn.billwatcher
     fs = gridfs.GridFS(db)
 
-    for bill in db.bills.find():
+    q = queue.JoinableQueue()
+
+    def flatten_data(bill):
         document = bill.get('document')
+
         if document:
             filename = document['name']
             url = document['url']
+            log.info('Downloading file...')
             f = requests.get(url)
             if f.status_code == 200:
                 log.info('Saving record...')
                 fs.put(f.content, filename=filename)
+            else:
+                log.info('File download error. Code %d' % f.status_code)
+
+    def worker():
+        while True:
+            item = q.get()
+            try:
+                flatten_data(item)
+            finally:
+                q.task_done()
+
+    for i in xrange(10):
+        gevent.spawn(worker)
+    
+    for bill in db.bills.find():
+        q.put(bill)
+
+    q.join()
     log.info('Done')
+    sys.exit(1)

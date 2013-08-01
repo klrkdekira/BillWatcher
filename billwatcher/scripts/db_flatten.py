@@ -22,7 +22,6 @@ def usage(argv):
 
 
 document_pattern = re.compile(".*\('(.*)','(.*)'\)")
-    
 
 def main(argv=sys.argv):
     if len(argv) != 2:
@@ -44,6 +43,7 @@ def main(argv=sys.argv):
     const_passed_at = 'Diluluskan Pada'
 
     db = conn.billwatcher
+
     for bills in db.bills_archive.find():
         year = bills['id'].split('_')[-1]
 
@@ -115,5 +115,7 @@ def main(argv=sys.argv):
                                  'passed_at': d}
                         data['history'].append(hitem)
 
+            log.info('Saving record...')
             db.bills.insert(data)
     log.info('Done!')
+    sys.exit(1)
