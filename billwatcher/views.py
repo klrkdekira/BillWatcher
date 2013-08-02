@@ -13,41 +13,48 @@ def views_include(config):
     config.add_route('search', '/search')
     config.add_route('about', '/about')
 
-@view_config(route_name='bill.list', renderer='bill/list.html')
-def bill_list(request):
-    page = request.params.get('page', '1')
+class BillView(object):
+    def __init__(self, request):
+        self.request = request
+        self.db = request.db
 
-    records = request.db.bills.find().sort([['bill_reference_id', -1]])
-    bills = []
+    def _list(self):
+        bills = self.db.bills.find().sort([['bill_reference_id', -1]])
+        return map(lambda bill: bill, bills)
+        
+    @view_config(route_name='bill.list', renderer='json', accept='application/json')
+    def api_list(self):
+        return {'bills': self._list()}
+        
+    @view_config(route_name='bill.list', renderer='bill/list.html')
+    def web_list(self):
+        page = self.request.params.get('page', '1')
 
-    for bill in records:
-        # year = bill['id'].split('_')[-1]
-        bills.extend(bill['item'])
+        bills = self._list()
 
-    data = paginate.Page(bills, page,
-                         items_per_page=20)
+        data = paginate.Page(bills, page,
+                             items_per_page=20)
 
-    # Quick hack for pager
-    start = data.page - 2
-    end = data.page + 3
-    if start <= 0:
-        start = 1
-        end = 6
-    if end >= data.page_count:
-        end = data.page_count + 1
-        start = end - 5
+        # Quick hack for pager
+        start = data.page - 2
+        end = data.page + 3
+        if start <= 0:
+            start = 1
+            end = 6
+        if end >= data.page_count:
+            end = data.page_count + 1
+            start = end - 5
 
-    return {'data': data,
-            'start': start,
-            'end': end}
+        return {'data': data,
+                'start': start,
+                'end': end}
 
-@view_config(route_name='bill.detail', renderer='bill/detail.html')
-def bill_detail(request):
-    rev_id = request.matchdict['rev_id']
-    bill = request.db.bills.find_one({'item.id': rev_id})
-    import pprint
-    pprint.pprint(bill)
-    return {}
+    @view_config(route_name='bill.detail', renderer='bill/detail.html')
+    @view_config(route_name='bill.detail', renderer='json', accept='application/json')
+    def view(self):
+        rev_id = self.request.matchdict['rev_id']
+        bill = self.db.bills.find_one({'item.id': rev_id})
+        return {'bill': bill}
 
 @view_config(route_name='feeds')
 def feeds(request):

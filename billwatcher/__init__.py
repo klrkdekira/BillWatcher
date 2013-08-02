@@ -1,14 +1,31 @@
+import datetime
+
 from pyramid.config import Configurator
+from pyramid.renderers import JSON
 
 from gridfs import GridFS
 from urlparse import urlparse
 import pymongo
+import bson
 
 def main(global_config, **settings):
     """ This function returns a Pyramid WSGI application.
     """
     config = Configurator(settings=settings)
     config.add_translation_dirs('locale/')
+
+    # Custom JSON renderer
+    json_renderer = JSON()
+    def datetime_adapter(obj, request):
+        return obj.isoformat()
+    json_renderer.add_adapter(datetime.datetime, datetime_adapter)
+
+    def objectid_adapter(obj, request):
+        return unicode(obj)
+    json_renderer.add_adapter(bson.objectid.ObjectId, objectid_adapter)
+
+    config.add_renderer('json', json_renderer)
+
     config.include('pyramid_jinja2')
     config.add_renderer('.html', 'pyramid_jinja2.renderer_factory')
     config.add_jinja2_search_path("billwatcher:templates")
