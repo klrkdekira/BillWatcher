@@ -37,20 +37,22 @@
 	  <thead>
 	    <tr>
 	      <th>{% trans %}Bill{% endtrans %}</th>
+	      <th>Status</th>
 	      <th>Year</th>
-	      <th>Approved Date</th>
+	      <th>Passed at</th>
 	    </tr>
 	  </thead>
 	  <tbody>
 	    {% for bill in data.items %}
 	    <tr>
 	      <td>
-		<a href="{{request.route_url('bill.detail', rev_id=bill['id'])}}">
-		  {{bill['text']}}
+		<a href="{{request.route_url('bill.detail', rev_id=bill['_id'])}}">
+		  {{bill['name']}}
 		</a>
 	      </td>
-	      <td>{{bill['id'].split('_')[1]}}</td>
-	      <td>{{bill['item'][-2]['text'].split(':')[-1] if bill.get('item')}}</td>
+	      <td>{{bill['status']}}</td>
+	      <td>{{bill['year']}}</td>
+	      <td>{{bill['passed_at']}}</td>
 	    </tr>
 	    {% endfor %}
 	  </tbody>

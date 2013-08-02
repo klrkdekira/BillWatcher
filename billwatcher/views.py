@@ -17,7 +17,7 @@ def views_include(config):
 def bill_list(request):
     page = request.params.get('page', '1')
 
-    records = request.db.bills.find().sort([['id', -1]])
+    records = request.db.bills.find().sort([['bill_reference_id', -1]])
     bills = []
 
     for bill in records:
@@ -54,12 +54,15 @@ def feeds(request):
     from pyramid.response import Response
     from webhelpers import feedgenerator
 
-    feed = feedgenerator.Rss201rev2Feed(title='test',
+    feed = feedgenerator.Rss201rev2Feed(title='Malaysian Bill Watcher',
                                         link=request.route_url('bill.list'),
-                                        description='test message')
-    feed.add_item(title='Hello',
-                  link=request.route_url('bill.list'),
-                  description='test')
+                                        description='Collection of bills debated in Malaysian Parliament')
+
+    bills = request.db.bills.find().sort([['bill_reference_id', -1]])
+    for bill in bills:
+        feed.add_item(title=bill['name'],
+                      link=request.route_url('bill.detail', rev_id=bill['_id']),
+                      description=bill['description'])
 
     resp = Response()
     resp.content_type = 'application/rss+xml'
