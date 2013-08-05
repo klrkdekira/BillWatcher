@@ -16,6 +16,4 @@ TODO
 ----
 - i18n
 - Search
-- Contact us
-- About us
 - Error page
