@@ -21,7 +21,8 @@ requires = [
     'lingua',
     'ipython',
     'requests',
-    'gevent'
+    'gevent',
+    'pymongo'
     ]
 
 setup(name='billwatcher',
