@@ -1,4 +1,25 @@
 {% extends "template.html" %}
 {% block content %}
-
+<div class="container">
+  <div class="row">
+    <div class="col-3">
+      <h2>Detail</h2>
+      <dl class="well">
+	<dt>Code:</dt><dd>{{bill['name']}}</dd>
+	<dt>Name:</dt><dd>{{bill['description']}}</dd>
+	<dt>Revision:</dt><dd>{{bill['year'] or ''}}</dd>
+	<dt>Status:</dt><dd>{{bill['status'].capitalize() if bill['status']}}</dd>
+      </dl>
+    </div>
+    <div class="col-9 text-center">
+      <h1>{{bill['description']}}</h1>
+      <iframe id="document_file" frameborder="0" width="100%" src="{{request.route_url('bill.doc', rev_id=bill['_id'])}}"></iframe>
+      <a class="btn btn-primary" href="{{request.route_url('bill.doc', rev_id=bill['_id'])}}">Can't view? Download here</a>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block js %}
+<script src="{{request.static_url('billwatcher:static/js/vendor/pdf.js')}}"></script>
+<script src="{{request.static_url('billwatcher:static/js/bill_details.js')}}"></script>
 {% endblock %}

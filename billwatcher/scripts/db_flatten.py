@@ -63,12 +63,12 @@ def main(argv=sys.argv):
                     'history': []}
         
             data['bill_reference_id'] = bill['id']
-            data['name'] = bill['text']
+            data['description'] = bill['text']
 
             item = bill.get('item')
             if item:
                 metadata = item.pop(0)
-                data['description'] = metadata['text']
+                data['name'] = metadata['text']
                 userdata = metadata.get('userdata')
                 if userdata:
                     content = userdata[0]['content']

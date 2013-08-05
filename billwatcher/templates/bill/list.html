@@ -50,9 +50,9 @@
 		  {{bill['name']}}
 		</a>
 	      </td>
-	      <td>{{bill['status']}}</td>
-	      <td>{{bill['year']}}</td>
-	      <td>{{bill['passed_at']}}</td>
+	      <td>{{bill['status'] or ''}}</td>
+	      <td>{{bill['year'] or ''}}</td>
+	      <td>{{bill['passed_at'] or ''}}</td>
 	    </tr>
 	    {% endfor %}
 	  </tbody>

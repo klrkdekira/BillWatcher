@@ -15,8 +15,7 @@ Getting Started
 TODO
 ----
 - i18n
-- PDF viewer
 - Search
 - Contact us
 - About us
-
+- Error page
