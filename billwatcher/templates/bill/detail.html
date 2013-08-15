@@ -12,7 +12,7 @@
       </dl>
     </div>
     <div class="col-9 text-center">
-      <h1>{{bill['description']}}</h1>
+      <h1>{{bill['name']}}</h1>
       <iframe id="document_file" frameborder="0" width="100%" src="{{request.route_url('bill.doc', rev_id=bill['_id'])}}"></iframe>
       <a class="btn btn-primary" href="{{request.route_url('bill.doc', rev_id=bill['_id'])}}">Can't view? Download here</a>
     </div>

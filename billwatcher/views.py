@@ -1,3 +1,6 @@
+import logging
+from pprint import pformat
+
 from pyramid.view import view_config
 from pyramid.i18n import TranslationStringFactory
 from pyramid.response import Response
@@ -7,6 +10,8 @@ from webhelpers import feedgenerator, paginate
 from bson.objectid import ObjectId
 
 _ = TranslationStringFactory('billwatcher')
+
+log = logging.getLogger(__name__)
 
 def views_include(config):
     config.add_route('bill.list', '/')
@@ -45,6 +50,7 @@ class BillView(object):
         if start <= 0:
             start = 1
             end = 6
+
         if end >= data.page_count:
             end = data.page_count + 1
             start = end - 5
@@ -64,8 +70,7 @@ class BillView(object):
     def view(self):
         rev_id = self.request.matchdict['rev_id']
         bill = self._get_bill(rev_id)
-        from pprint import pprint
-        pprint(bill)
+        log.info(pformat(bill))
         return {'bill': bill}
 
     @view_config(route_name='bill.doc')

@@ -41,6 +41,7 @@ def main(argv=sys.argv):
     const_second_reading = 'Bacaan Kedua'
     const_presented_by = 'Dibentang Oleh'
     const_passed_at = 'Diluluskan Pada'
+    const_default_status = 'passed'
 
     db = conn.billwatcher
 
@@ -55,7 +56,7 @@ def main(argv=sys.argv):
                     'ducument': None,
                     'passed_at': None,
                     'presented_by': None,
-                    'status': None,
+                    'status': const_default_status,
                     'passed_at': None,
                     'first_reading': None,
                     'second_reading': None,
@@ -68,7 +69,11 @@ def main(argv=sys.argv):
             item = bill.get('item')
             if item:
                 metadata = item.pop(0)
-                data['name'] = metadata['text']
+                if metadata['text']:
+                    data['name'] = metadata['text']
+                else:
+                    data['name'] = bill['text'].split('-')[0].strip()
+
                 userdata = metadata.get('userdata')
                 if userdata:
                     content = userdata[0]['content']
@@ -81,7 +86,7 @@ def main(argv=sys.argv):
                 for h in item:
                     text = h['text']
                     d = text.split(':')[-1]
-
+                    
                     if const_first_reading in text:
                         data['status'] = 'first reading'
                         if d:
@@ -114,6 +119,8 @@ def main(argv=sys.argv):
                         hitem = {'history_id': h['id'],
                                  'passed_at': d}
                         data['history'].append(hitem)
+            else:
+                data['name'] = bill['text'].split('-')[0].strip()
 
             log.info('Saving record...')
             db.bills.insert(data)
