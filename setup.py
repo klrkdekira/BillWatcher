@@ -22,7 +22,9 @@ requires = [
     'ipython',
     'requests',
     'gevent',
-    'pymongo'
+    'pymongo',
+    'slate',
+    'pdfminer'
     ]
 
 setup(name='billwatcher',
@@ -51,5 +53,6 @@ setup(name='billwatcher',
       db_backup = billwatcher.scripts.db_backup:main
       db_flatten = billwatcher.scripts.db_flatten:main
       db_doc_downloader = billwatcher.scripts.db_doc_downloader:main
+      pdf_parse = billwatcher.scripts.pdf_parse:main
       """,
       )

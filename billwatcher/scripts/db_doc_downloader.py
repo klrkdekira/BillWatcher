@@ -47,20 +47,22 @@ def main(argv=sys.argv):
 
         if document:
             filename = document['name']
-            url = document['url']
-            log.info('Downloading file...')
 
-            # Retry 5 times if error
-            retries = 0
-            while retries < 6:
-                f = requests.get(url)
-                if f.status_code == 200:
-                    log.info('Saving record...')
-                    fs.put(f.content, filename=filename)
-                    break
-                else:
-                    log.info('File download error. Code %d' % f.status_code)
-                retries += 1
+            if not fs.exists(filename=filename):
+                log.info('Downloading file...')
+                # Retry 5 times if error
+                url = document['url']
+                retries = 0
+                while retries < 6:
+                    f = requests.get(url)
+                    if f.status_code == 200:
+                        log.info(f.headers['content-type'])
+                        log.info('Saving record...')
+                        fs.put(f.content, filename=filename)
+                        break
+                    else:
+                        log.info('File download error. Code %d' % f.status_code)
+                    retries += 1
 
     def worker():
         while True:

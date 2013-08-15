@@ -50,7 +50,7 @@
 		  {{bill['name']}}
 		</a>
 	      </td>
-	      <td>{{bill['status'] or ''}}</td>
+	      <td>{{bill['status'].capitalize() if bill['status']}}</td>
 	      <td>{{bill['year'] or ''}}</td>
 	      <td>{{bill['passed_at'] or ''}}</td>
 	    </tr>
