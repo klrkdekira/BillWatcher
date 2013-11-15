@@ -1,6 +1,9 @@
 import logging
 from pprint import pformat
 
+import requests
+import simplejson 
+
 from pyramid.view import view_config
 from pyramid.i18n import TranslationStringFactory
 from pyramid.response import Response
@@ -37,9 +40,15 @@ class BillView(object):
         
     @view_config(route_name='bill.list', renderer='bill/list.html', accept='text/html')
     def web_list(self):
-        page = self.request.params.get('page', '1')
+        p = self.request.params
+        page = p.get('page', '1')
+        search_param = p.get('search')
 
-        bills = self._list()
+        if search_param:
+            results = search(self.request)
+            bills = results['bills']
+        else:
+            bills = self._list()
 
         data = paginate.Page(bills, page,
                              items_per_page=20)
@@ -112,3 +121,19 @@ def feeds(request):
 @view_config(route_name='about', renderer='about.html')
 def about(request):
     return {}
+
+ES_ENDPOINT = 'http://localhost:9200/mongoindex/_search'
+
+def search(request):
+    search_param = request.params.get('search')
+    params = {"q": search_param}
+    resp = requests.get(ES_ENDPOINT, params=params)
+    if resp.status_code != 200:
+        # TODO, implement session factory
+        # request.session.flash('Sorry. Search engine is down at the moment. Please try again')
+        # return HTTPFound(request.route_url('bill.list'))
+        return {}
+    results = simplejson.loads(resp.text)
+    hits = results['hits']
+    bills = hits['hits']
+    return {'bills': map(lambda bill: bill['_source'], bills)}

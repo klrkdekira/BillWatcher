@@ -47,7 +47,7 @@
 	    <tr>
 	      <td>
 		<a href="{{request.route_url('bill.detail', rev_id=bill['_id'])}}">
-		  {{bill['name']}}
+		  {{bill['description']}}
 		</a>
 	      </td>
 	      <td>{{bill['status'].capitalize() if bill['status']}}</td>
