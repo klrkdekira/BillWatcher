@@ -8,14 +8,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Malaysian Bill Watcher</title>
     <meta name="description" content="Collection of bills debated in Malaysian Parliament">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="alternate" href="{{request.route_url('feeds')}}" type="application/rss+xml" title="RSS Feeds" />
-
-    <link rel="stylesheet" href="{{request.static_url('billwatcher:static/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{request.static_url('billwatcher:static/css/bootstrap-responsive.min.css')}}">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
     {% block css %}{% endblock %}
-    <script src="{{request.static_url('billwatcher:static/js/vendor/modernizr-2.6.2.min.js')}}"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
   </head>
   <body>
     <div class="navbar navbar-inverse navbar-static">
@@ -54,9 +52,8 @@
       </ul>
     </div>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="{{request.static_url('billwatcher:static/js/vendor/jquery-1.9.1.min.js')}}"><\/script>')</script>
-    <script src="{{request.static_url('billwatcher:static/js/vendor/bootstrap.min.js')}}"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
     <script src="{{request.static_url('billwatcher:static/js/plugins.js')}}"></script>
     <script src="{{request.static_url('billwatcher:static/js/main.js')}}"></script>
     {% block js %}{% endblock %}

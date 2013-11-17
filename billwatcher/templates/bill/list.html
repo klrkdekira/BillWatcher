@@ -3,62 +3,35 @@
 <div class="container">
   <div class="row">
     <div class="col-12">
-      <ul class="pagination pull-right">
-	<li>
-	  <a href="{{request.route_url('bill.list', _query={'page': data.first_page})}}">
-	    &lt;&lt;
-	  </a>
-	</li>
-	<li class="{{'disabled' if not data.previous_page}}">
-	  <a href="{% if data.previous_page %}{{request.route_url('bill.list', _query={'page': data.previous_page})}}{% else %}#{% endif %}">
-	    &lt;
-	  </a>
-	</li>
-	{% for page in range(start, end) %}
-	<li class="{{'active' if page == data.page}}">
-	  <a href="{{request.route_url('bill.list', _query={'page': page})}}">{{page}}</a>
-	</li>
-	{% endfor %}
-	<li class="{{'disabled' if not data.next_page}}">
-	  <a href="{% if data.next_page %}{{request.route_url('bill.list', _query={'page': data.next_page})}}{% else %}#{% endif %}">
-	    &gt;
-	  </a>
-	</li>
-	<li>
-	  <a href="{{request.route_url('bill.list', _query={'page': data.last_page})}}">
-	    &gt;&gt;
-	  </a>
-	</li>
-      </ul>
-    </div>	
-    <div class="row">
-      <div class="col-12">
-	<table class="table table-striped">
-	  <thead>
-	    <tr>
-	      <th>{% trans %}Bill{% endtrans %}</th>
-	      <th>Status</th>
-	      <th>Year</th>
-	      <th>Passed at</th>
-	    </tr>
-	  </thead>
-	  <tbody>
-	    {% for bill in data.items %}
-	    <tr>
-	      <td>
-		<a href="{{request.route_url('bill.detail', rev_id=bill['_id'])}}">
-		  {{bill['description']}}
-		</a>
-	      </td>
-	      <td>{{bill['status'].capitalize() if bill['status']}}</td>
-	      <td>{{bill['year'] or ''}}</td>
-	      <td>{{bill['passed_at'] or ''}}</td>
-	    </tr>
-	    {% endfor %}
-	  </tbody>
-	</table>
+      <div id="pager">
+        {{data.pager(format='$link_first $link_previous ~2~ $link_next $link_last')}}
       </div>
+      <table class="table table-striped table-responsive">
+	<thead>
+	  <tr>
+	    <th>{% trans %}Bill{% endtrans %}</th>
+	    <th>Status</th>
+	    <th>Year</th>
+	    <th>Passed at</th>
+	  </tr>
+	</thead>
+	<tbody>
+	  {% for bill in data.items %}
+	  <tr>
+	    <td>
+	      <a href="{{request.route_url('bill.detail', rev_id=bill['_id'])}}">
+		{{bill['description']}}
+	      </a>
+	    </td>
+	    <td>{{bill['status'].capitalize() if bill['status']}}</td>
+	    <td>{{bill['year'] or ''}}</td>
+	    <td>{{bill['passed_at'] or ''}}</td>
+	  </tr>
+	  {% endfor %}
+	</tbody>
+      </table>
     </div>
   </div>
+</div>
 </div>
 {% endblock %}
