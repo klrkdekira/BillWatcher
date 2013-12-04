@@ -50,23 +50,12 @@ class BillView(object):
         else:
             bills = self._list()
 
+        page_url = paginate.PageURL_WebOb(self.request)
         data = paginate.Page(bills, page,
-                             items_per_page=20)
+                             items_per_page=20,
+                             url=page_url)
 
-        # Quick hack for pager
-        start = data.page - 2
-        end = data.page + 3
-        if start <= 0:
-            start = 1
-            end = 6
-
-        if end >= data.page_count:
-            end = data.page_count + 1
-            start = end - 5
-
-        return {'data': data,
-                'start': start,
-                'end': end}
+        return {'data': data}
 
     def _get_bill(self, rev_id):
         bill = self.db.bills.find_one({'_id': ObjectId(rev_id)})
@@ -122,7 +111,7 @@ def feeds(request):
 def about(request):
     return {}
 
-ES_ENDPOINT = 'http://localhost:9200/mongoindex/_search'
+ES_ENDPOINT = 'http://billwatcher.sinarproject.org:9200/mongoindex/_search'
 
 def search(request):
     search_param = request.params.get('search')
