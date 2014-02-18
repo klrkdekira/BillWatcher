@@ -1,0 +1,61 @@
+/* Sticky footer styles
+   -------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 180px;
+}
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 180px;
+    /* height: 100%; */
+    background-color: #f5f5f5;
+}
+
+#jumbo {
+    height: 300px;    font-size: 20px;
+
+    background: none;
+}
+
+#jumbo form {
+    margin-top: 50px;
+}
+
+.textcenter {
+    text-align: center;
+}
+
+#bigsearch input,
+#bigsearch button {
+    font-size: 20px;
+    height: 60px;
+}
+
+#bigsearch button {
+    width: 100px;
+    font-size: 30px;
+}
+
+#sinar-logo {
+    width: 200px;
+}
+
+#footer {
+    border-top: 2px solid #eee;
+}
+
+#footer > .container {
+    padding: 20px 10px 0;
+}
+
+#pager {
+    display: none;
+    margin: -20px 0;
+}

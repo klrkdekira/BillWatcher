@@ -1,20 +1,44 @@
 {% extends "template.html" %}
 {% block content %}
-<div class="container">
+<div class="container-fluid">
   <div class="row">
-    <div class="col-md-3">
-      <h2>Detail</h2>
-      <dl class="well">
-	<dt>Code:</dt><dd>{{bill['name']}}</dd>
-	<dt>Name:</dt><dd>{{bill['description']}}</dd>
-	<dt>Revision:</dt><dd>{{bill['year'] or ''}}</dd>
-	<dt>Status:</dt><dd>{{bill['status'].capitalize() if bill['status']}}</dd>
-      </dl>
-    </div>
-    <div class="col-md-9 text-center">
-      <h1>{{bill['name']}}</h1>
-      <iframe id="document_file" frameborder="0" width="100%" src="{{request.route_url('bill.doc', rev_id=bill['_id'])}}"></iframe>
-      <a class="btn btn-primary" href="{{request.route_url('bill.doc', rev_id=bill['_id'])}}">Can't view? Download here</a>
+    <div class="col-lg-12">
+      <div class="col-md-2 sidebar">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            Detail
+          </div>
+          <div class="panel-body">
+            <dl>
+	      <dt>Code:</dt><dd>{{bill['name']}}</dd>
+	      <dt>Name:</dt><dd>{{bill['description']}}</dd>
+	      <dt>Year:</dt><dd>{{bill['year'] or ''}}</dd>
+	      <dt>Status:</dt><dd>{{bill['status'].capitalize() if bill['status']}}</dd>
+              <dt>Presented by:</dt><dd>{{bill['presented_by']}}</dd>
+            </dl>
+          </div>
+        </div>
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            History
+          </div>
+          <div class="panel-body">
+            <dl>
+	      <dt>First Reading:</dt><dd>{{bill['history']['first_reading']}}</dd>
+	      <dt>Second Reading:</dt><dd>{{bill['history']['second_reading']}}</dd>
+	      <dt>Passed At:</dt><dd>{{bill['history']['passed_at']}}</dd>
+            </dl>
+          </div>
+        </div>
+        <a class="btn btn-primary" href="{{request.route_url('bill.doc', bill_id=bill['_id'])}}">Can't view? Download here</a>
+
+      </div>
+      <div class="col-md-8">
+        <iframe id="document_file" frameborder="0" width="100%" src="{{request.route_url('bill.doc', bill_id=bill['_id'])}}"></iframe>
+      </div>
+      <div class="col-md-2">
+        Hello, World!
+      </div>
     </div>
   </div>
 </div>

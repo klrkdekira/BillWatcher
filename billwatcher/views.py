@@ -17,21 +17,52 @@ _ = TranslationStringFactory('billwatcher')
 log = logging.getLogger(__name__)
 
 def views_include(config):
-    config.add_route('bill.list', '/')
-    config.add_route('bill.detail', '/detail/{rev_id}')
-    config.add_route('bill.doc', '/doc/{rev_id}')
+    config.add_route('home', '/')
 
-    config.add_route('feeds', '/feeds')
+    config.add_route('bill.list', '/bill')
+    config.add_route('bill.detail', 'bill/{bill_id}')
+    config.add_route('bill.doc', '/bill/doc/{bill_id}')
+
+    config.add_route('feed.list', '/feed')
+    
     config.add_route('search', '/search')
-    config.add_route('about', '/about')
 
-class BillView(object):
+class HomeView(object):
     def __init__(self, request):
         self.request = request
         self.db = request.db
 
+    @view_config(route_name='home', renderer='home.html', accept='text/html')
+    def home(self):
+        latest_bills = (self.db.bills.find({}, {'name': 1, 'description': 1})
+                        .sort([('year', -1), ('name', -1)])
+                        .limit(5))
+        return {'latest_bills': latest_bills}
+    
+class BillView(object):
+    def __init__(self, request):
+        self.request = request
+        self.db = request.db
+        self.params = request.params
+
     def _list(self):
-        bills = self.db.bills.find().sort([['bill_reference_id', -1]])
+        p = self.params
+        year = p.get('year')
+        status = p.get('status')
+
+        spec = {}
+
+        if year:
+            spec['year'] = year
+
+        if status:
+            spec['status'] = status
+
+        bills = self.db.bills.find(spec, {'name': 1,
+                                          'year': 1,
+                                          'description': 1,
+                                          'status': 1}).sort([('year', -1),
+                                                              ('name', -1)])
         return map(lambda bill: bill, bills)
         
     @view_config(route_name='bill.list', renderer='json', accept='application/json')
@@ -40,25 +71,30 @@ class BillView(object):
         
     @view_config(route_name='bill.list', renderer='bill/list.html', accept='text/html')
     def web_list(self):
-        p = self.request.params
+        p = self.params
         page = p.get('page', '1')
-        search_param = p.get('search')
-
-        if search_param:
-            results = search(self.request)
-            bills = results['bills']
-        else:
-            bills = self._list()
-
+        
+        bills = self._list()
         page_url = paginate.PageURL_WebOb(self.request)
         data = paginate.Page(bills, page,
                              items_per_page=20,
                              url=page_url)
 
-        return {'data': data}
+        years = (self.db.bills
+                 .aggregate([{'$group': {"_id": "$year",
+                                         "count": {"$sum": 1}}},
+                             {'$sort': {'_id': -1}}]))
+        statuses = (self.db.bills
+                    .aggregate([{'$group': {"_id": "$status",
+                                            "count": {"$sum": 1}}},
+                                {'$sort': {'count': -1}}]))
 
-    def _get_bill(self, rev_id):
-        bill = self.db.bills.find_one({'_id': ObjectId(rev_id)})
+        return {'data': data,
+                'years': years['result'],
+                'statuses': statuses['result']}
+
+    def _get_bill(self, bill_id):
+        bill = self.db.bills.find_one({'_id': ObjectId(bill_id)})
         if not bill:
             raise HTTPNotFound()
         return bill
@@ -66,15 +102,15 @@ class BillView(object):
     @view_config(route_name='bill.detail', renderer='bill/detail.html', accept='text/html')
     @view_config(route_name='bill.detail', renderer='json', accept='application/json')
     def view(self):
-        rev_id = self.request.matchdict['rev_id']
-        bill = self._get_bill(rev_id)
+        bill_id = self.request.matchdict['bill_id']
+        bill = self._get_bill(bill_id)
         log.info(pformat(bill))
         return {'bill': bill}
 
     @view_config(route_name='bill.doc')
     def doc(self):
-        rev_id = self.request.matchdict['rev_id']
-        bill = self._get_bill(rev_id)
+        bill_id = self.request.matchdict['bill_id']
+        bill = self._get_bill(bill_id)
         document = bill.get('document')
         if not document:
             raise HTTPNotFound()
@@ -88,29 +124,33 @@ class BillView(object):
         resp.content_type = pdf_doc.content_type
         resp.body_file.write(pdf_doc.read())
         return resp            
-            
-@view_config(route_name='feeds')
-def feeds(request):
 
-    feed = feedgenerator.Rss201rev2Feed(title='Malaysian Bill Watcher',
-                                        link=request.route_url('bill.list'),
-                                        description='Collection of bills debated in Malaysian Parliament')
+class FeedView(object):
+    def __init__(self, request):
+        self.request = request
+        self.db = request.db
 
-    bills = request.db.bills.find().sort([['bill_reference_id', -1]])
-    for bill in bills:
-        feed.add_item(title=bill['name'],
-                      link=request.route_url('bill.detail', rev_id=bill['_id']),
-                      description=bill['description'])
+    def _list(self):
+        bill_view = BillView(self.request)
+        return bill_view._list()
 
-    resp = Response()
-    resp.content_type = 'application/rss+xml'
-    feed.write(resp.body_file, 'utf-8')
-    return resp
+    @view_config(route_name='feed.list')
+    def list(self):
+        feed = feedgenerator.Rss201rev2Feed(title='Malaysian BillWatcher',
+                                            link=self.request.route_url('bill.list'),
+                                            description='Collection of bills debated in Malaysian Parliament')
 
-@view_config(route_name='about', renderer='about.html')
-def about(request):
-    return {}
+        bills = self._list()
+        for bill in bills:
+            feed.add_item(title=bill['name'],
+                          link=self.request.route_url('bill.detail', bill_id=bill['_id']),
+                          description=bill['description'])
 
+        resp = Response()
+        resp.content_type = 'application/rss+xml'
+        feed.write(resp.body_file, 'utf-8')
+        return resp        
+        
 ES_ENDPOINT = 'http://billwatcher.sinarproject.org:9200/mongoindex/_search'
 
 def search(request):

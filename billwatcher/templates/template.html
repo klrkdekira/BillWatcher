@@ -6,49 +6,102 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Malaysian Bill Watcher</title>
+    <title>Malaysian Parliament Bill Watcher</title>
     <meta name="description" content="Collection of bills debated in Malaysian Parliament">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="alternate" href="{{request.route_url('feeds')}}" type="application/rss+xml" title="RSS Feeds" />
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="alternate" href="{{request.route_url('feed.list')}}" type="application/rss+xml" title="RSS Feeds" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="{{request.static_url('billwatcher:static/css/main.css')}}" rel="stylesheet">
     {% block css %}{% endblock %}
-    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
   </head>
   <body>
-    <div class="navbar navbar-inverse navbar-static">
-      <div class="container">
-	<a class="navbar-brand" href="{{request.route_url('bill.list')}}">Bill Watcher</a>
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container-fluid">
+	<a class="navbar-brand" href="{{request.route_url('home')}}">BillWatcher</a>
 	<ul class="nav navbar-nav">
-	  <li><a href="{{request.route_url('about')}}">About</a></li>
+          <li>
+            <a href="{{request.route_url('bill.list')}}">Bills</a>
+          </li>
 	  {% block links %}{% endblock %}
 	</ul>
-	<form method="GET" action="{{request.route_url('bill.list')}}" class="navbar-form pull-right">
-	  <input type="text" name="search" class="form-control" placeholder="Search for bill here" value="{{request.params.get('search', '')}}">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="{{request.route_url('feed.list')}}">
+              <i class="fa fa-rss fa-lg"></i>
+              Subscribe
+            </a>
+          </li>
+        </ul>
+        {% if request.url != request.route_url('home') %}
+	<form method="GET" action="{{request.route_url('bill.list')}}" class="navbar-form navbar-right">
+          <div class="input-group">
+	    <input type="text" name="search" class="form-control" placeholder="Search for Bill here" value="{{request.params.get('search', '')}}">
+            <span class="input-group-btn">
+              <button type="button" class="btn btn-default">Go</button>
+            </span>
+          </div>
 	</form>
+        {% endif %}
       </div>
-    </div>
+    </nav>
 
     {% block content %}{% endblock %}
 
-    <div class="container">
-      <div class="pull-left">
-	A open source project of <a href="http://sinarproject.org/"><strong>Sinar Project</strong></a>
+    <div id="footer">
+      <div class="container">
+        <div class="col-lg-12">
+          <div class="col-md-4">
+            <dl>
+              <dt>This is an open source project</dt>
+              <dd>Our Code is in github you can help us by fork and contribute code, or report bug to us.</dd>
+              <dd>
+              </dd>
+            </dl>
+            <ul id="github-links" class="pull-left list-inline">
+              <li>
+	        <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=klrkdekira&repo=BillWatcher-2.0&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+              </li>
+              <li>
+	        <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=klrkdekira&repo=BillWatcher-2.0&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="102px" height="20px"></iframe>
+              </li>
+            </ul>
+          </div>                  
+          <div class="col-md-4">
+            <dl>
+              <dt>Who we are</dt>
+              <dd>
+                <img id="sinar-logo" src="{{request.static_url('billwatcher:static/img/sinar.png')}}" />
+                <br />
+                We are a group of concerned Citizen that hope to see more transparency in government.
+              </dd>
+            </dl>
+          </div>
+          <div class="col-md-4">
+            <dl>
+              <dt>The Team</dt>
+              <dd><a href="https://github.com/sweemeng">Swee Meng</a></dd>
+              <dd><a href="https://github.com/klrkdekira">Chee Leong</a></dd>
+            </dl>            
+            <dl>
+              <dt>Contacts</dt>
+              <dd>Email: <a href="mailto:sinarproject@gmail.com">sinarproject@gmail.com</a></dd>
+              <dd>
+                Twitter: <a href="https://twitter.com/sinarproject" id="twitter-link" class="twitter-follow-button" data-show-count="false">Follow @sinarproject</a>
+              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+              </dd>
+            </dl>
+          </div>
+        </div>
       </div>
-      <ul class="pull-left" style="list-style: none">
-	<li class="pull-left">
-	  <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=klrkdekira&repo=BillWatcher-2.0&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
-	</li>
-	<li class="pull-left">
-	  <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=klrkdekira&repo=BillWatcher-2.0&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="102px" height="20px"></iframe>
-	</li>
-      </ul>
     </div>
+</div>      
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
-      <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
-      <script src="{{request.static_url('billwatcher:static/js/plugins.js')}}"></script>
-      <script src="{{request.static_url('billwatcher:static/js/main.js')}}"></script>
-      {% block js %}{% endblock %}
-  </body>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="{{request.static_url('billwatcher:static/js/plugins.js')}}"></script>
+{% block js %}{% endblock %}
+</body>
 </html>

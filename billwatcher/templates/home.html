@@ -1,0 +1,51 @@
+{% extends "template.html" %}
+{% block content %}
+<div id="jumbo" class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="textcenter">Malaysian BillWatcher</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2">
+        
+	<form id="bigsearch" method="GET" action="{{request.route_url('search')}}">
+          <div class="input-group">
+	    <input type="text" name="search" class="form-control" placeholder="Search for Bill here" value="{{request.params.get('search', '')}}">
+            <span class="input-group-btn">
+              <button type="button" class="btn btn-default">Go</button>
+            </span>
+          </div>
+	</form>      
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-offset-2 col-lg-8 cal">
+      <h3>Latest bills</h3>
+      <table class="table">
+        {% for bill in latest_bills %}
+        <tr>
+          <td>{{bill.name}}</td>
+          <td>
+            <a href="{{request.route_url('bill.detail', bill_id=bill._id)}}">
+              {{bill.description}}
+            </a>
+          </td>
+        </tr>
+        {% endfor %}
+      </table>
+      <span class="pull-right">
+        <a href="{{request.route_url('bill.list')}}">
+          More Bills
+          <i class="fa fa-angle-double-right"></i>
+        </a>
+      </span>
+    </div>
+  </div>
+</div>
+{% endblock %}

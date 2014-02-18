@@ -9,6 +9,7 @@ $(function () {
     }).promise()
         .done(function () {
             pager.html(ul);
+            pager.show();
         });
 });
 
