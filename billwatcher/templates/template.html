@@ -36,14 +36,17 @@
           </li>
         </ul>
         {% if request.url != request.route_url('home') %}
-	<form method="GET" action="{{request.route_url('search')}}" class="navbar-form navbar-right">
+	<form method="GET" action="{{request.route_url('search')}}" class="navbar-form navbar-right" role="search" style="width: 250px">
+          <div style="float: right">
           <div class="input-group">
 	    <input type="text" name="search" class="form-control" placeholder="Search for Bill here" value="{{request.params.get('search', '')}}">
             <span class="input-group-btn">
               <button type="button" class="btn btn-default">Go</button>
             </span>
+          </div>            
+            
           </div>
-	</form>
+	</form>          
         {% endif %}
       </div>
     </nav>
@@ -90,7 +93,7 @@
               <dd>Email: <a href="mailto:sinarproject@gmail.com">sinarproject@gmail.com</a></dd>
               <dd>
                 Twitter: <a href="https://twitter.com/sinarproject" id="twitter-link" class="twitter-follow-button" data-show-count="false">Follow @sinarproject</a>
-              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
               </dd>
             </dl>
           </div>
