@@ -1,5 +1,4 @@
 import logging
-from pprint import pformat
 
 import requests
 import simplejson 
@@ -104,7 +103,6 @@ class BillView(object):
     def view(self):
         bill_id = self.request.matchdict['bill_id']
         bill = self._get_bill(bill_id)
-        log.info(pformat(bill))
         return {'bill': bill}
 
     @view_config(route_name='bill.doc')
@@ -153,6 +151,7 @@ class FeedView(object):
         
 ES_ENDPOINT = 'http://billwatcher.sinarproject.org:9200/mongoindex/_search'
 
+@view_config(route_name='search', renderer='search.html', accept='text/html')
 def search(request):
     search_param = request.params.get('search')
     params = {"q": search_param}
@@ -165,4 +164,4 @@ def search(request):
     results = simplejson.loads(resp.text)
     hits = results['hits']
     bills = hits['hits']
-    return {'bills': map(lambda bill: bill['_source'], bills)}
+    return {'data': map(lambda bill: bill['_source'], bills)}

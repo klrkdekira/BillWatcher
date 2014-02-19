@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Malaysian Parliament Bill Watcher</title>
+    <title>{% block title %}Malaysian Parliament Bill Watcher{% endblock %}</title>
     <meta name="description" content="Collection of bills debated in Malaysian Parliament">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -36,7 +36,7 @@
           </li>
         </ul>
         {% if request.url != request.route_url('home') %}
-	<form method="GET" action="{{request.route_url('bill.list')}}" class="navbar-form navbar-right">
+	<form method="GET" action="{{request.route_url('search')}}" class="navbar-form navbar-right">
           <div class="input-group">
 	    <input type="text" name="search" class="form-control" placeholder="Search for Bill here" value="{{request.params.get('search', '')}}">
             <span class="input-group-btn">
