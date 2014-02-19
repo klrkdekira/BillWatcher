@@ -24,7 +24,7 @@ requires = [
     'gevent',
     'pymongo',
     'slate',
-    'pdfminer'
+    'pdfminer',
     ]
 
 setup(name='billwatcher',
@@ -50,8 +50,6 @@ setup(name='billwatcher',
       [paste.app_factory]
       main = billwatcher:main
       [console_scripts]
-      db_backup = billwatcher.scripts.db_backup:main
-      db_flatten = billwatcher.scripts.db_flatten:main
       db_doc_downloader = billwatcher.scripts.db_doc_downloader:main
       pdf_parse = billwatcher.scripts.pdf_parse:main
       """,

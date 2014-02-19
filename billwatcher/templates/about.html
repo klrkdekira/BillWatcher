@@ -1,17 +1,15 @@
 {% extends "template.html" %}
 {% block content %}
 <div class="container-fluid">
-  <div class="sidebar span3">
-    <div class="well">
-      <h5>The Team</h5>
-      <dl>
-        <dt>Developer</dt>
-        <dd><a href="https://github.com/sweemeng">sweemeng</a></dd>
-        <dd><a href="https://github.com/klrkdekira">cheeleong</a></dd>
-      </dl>
-    </div>
+  <div class="sidebar col-sm-3">
+    <ul class="nav nav-sidebar">
+      <li class="active">The Team</li>
+      <li>Developer</li>
+      <li><a href="https://github.com/sweemeng">sweemeng</a></li>
+      <li><a href="https://github.com/klrkdekira">cheeleong</a></li>
+    </ul>
   </div>
-  <div class="span9">
+  <div class="col-sm-9">
     <div class="container">
       <h1>Who We Are</h1>
       <img src="{{request.static_url('billwatcher:static/img/sinar.png')}}" />
