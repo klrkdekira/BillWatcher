@@ -40,7 +40,7 @@
         <a class="btn btn-primary" href="{{request.route_url('bill.doc', bill_id=bill['_id'])}}">Can't view? Download here</a>
       </div>
       <div class="col-md-6">
-        <iframe id="document_file" frameborder="0" width="100%" src="{{request.route_url('bill.doc', bill_id=bill['_id'])}}"></iframe>
+        <iframe id="document_file" frameborder="0" width="100%" data-src="{{request.route_url('bill.doc', bill_id=bill['_id'])}}"></iframe>
       </div>
       <div class="col-md-3" id="social">
         <a href="{{request.url}}" class="twitter-share-button" data-via="twitterapi" data-lang="en">Tweet</a>
@@ -53,14 +53,18 @@
 {% endblock %}
 {% block js %}
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
+<script defer="defer">(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
   js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=APPID";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-<script src="{{request.static_url('billwatcher:static/js/vendor/pdf.js')}}"></script>
+<script defer="defer">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 <script src="{{request.static_url('billwatcher:static/js/bill_details.js')}}"></script>
+<script defer="defer" src="{{request.static_url('billwatcher:static/js/vendor/pdf.js')}}"></script>
+<script defer="defer">
+  var iframe = $("iframe#document_file");
+  iframe.attr("src", iframe.attr("data-src"));
+</script>
 {% endblock %}
