@@ -1,8 +1,5 @@
 import logging
 
-import requests
-import simplejson 
-
 from pyramid.view import view_config
 from pyramid.i18n import TranslationStringFactory
 from pyramid.response import Response
@@ -148,20 +145,14 @@ class FeedView(object):
         resp.content_type = 'application/rss+xml'
         feed.write(resp.body_file, 'utf-8')
         return resp        
-        
-ES_ENDPOINT = 'http://billwatcher.sinarproject.org:9200/mongoindex/_search'
 
 @view_config(route_name='search', renderer='search.html', accept='text/html')
 def search(request):
     search_param = request.params.get('search')
-    params = {"q": search_param}
-    resp = requests.get(ES_ENDPOINT, params=params)
-    if resp.status_code != 200:
-        # TODO, implement session factory
-        # request.session.flash('Sorry. Search engine is down at the moment. Please try again')
-        # return HTTPFound(request.route_url('bill.list'))
-        return {}
-    results = simplejson.loads(resp.text)
-    hits = results['hits']
-    bills = hits['hits']
-    return {'data': map(lambda bill: bill['_source'], bills)}
+    search_pattern = {"$regex": search_param}
+    search_dict = {'$or': [{'name': search_pattern},
+                           {'description': search_pattern}]}
+    results = (request.db.bills.find(search_dict, {'name': 1, 'description': 1, 'year': 1, 'status': 1})
+               .sort([('year', -1), ('name', -1)]))
+
+    return {'bills': results}

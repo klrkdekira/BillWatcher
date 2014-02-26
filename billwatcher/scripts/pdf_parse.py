@@ -85,7 +85,7 @@ def main(argv=sys.argv):
             finally:
                 q.task_done()
 
-    for i in xrange(10):
+    for i in xrange(4):
         gevent.spawn(worker)
     
     for bill in db.bills.find():
