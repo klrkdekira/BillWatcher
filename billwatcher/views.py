@@ -61,6 +61,7 @@ class BillView(object):
                                                               ('name', -1)])
         return map(lambda bill: bill, bills)
         
+    @view_config(route_name='home', renderer='json', accept='application/json')
     @view_config(route_name='bill.list', renderer='json', accept='application/json')
     def api_list(self):
         return {'bills': self._list()}
