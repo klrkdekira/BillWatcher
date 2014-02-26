@@ -25,6 +25,7 @@ requires = [
     'pymongo',
     'slate',
     'pdfminer',
+    'elasticsearch',
     ]
 
 setup(name='billwatcher',
@@ -50,7 +51,8 @@ setup(name='billwatcher',
       [paste.app_factory]
       main = billwatcher:main
       [console_scripts]
-      db_doc_downloader = billwatcher.scripts.db_doc_downloader:main
-      pdf_parse = billwatcher.scripts.pdf_parse:main
+      bill_download = billwatcher.scripts.bill_download:main
+      bill_parse = billwatcher.scripts.bill_parse:main
+      bill_to_es = billwatcher.scripts.bill_to_es:main
       """,
       )
