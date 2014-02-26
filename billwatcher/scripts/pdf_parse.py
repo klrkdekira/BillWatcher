@@ -82,6 +82,8 @@ def main(argv=sys.argv):
             item = q.get()
             try:
                 pdf_to_text(item)
+            except Exception as e:
+                log.error(e)
             finally:
                 q.task_done()
 
