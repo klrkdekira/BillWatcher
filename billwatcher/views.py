@@ -149,7 +149,7 @@ class FeedView(object):
 
 @view_config(route_name='search', renderer='search.html', accept='text/html')
 def search(request):
-    search_param = request.params.get('search')
+    search_param = request.params.get('search', '')
     query_dsl = {"fuzzy_like_this": {"like_text": search_param,
                                      "fields": ['name', 'description']}}
     res = request.es.search(size=30,
