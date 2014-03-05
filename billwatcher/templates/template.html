@@ -21,30 +21,40 @@
     <nav class="navbar navbar-default navbar-static-top" role="navigation">
       <div class="container-fluid">
 	<a class="navbar-brand" href="{{request.route_url('home')}}">BillWatcher</a>
-	<ul class="nav navbar-nav">
-          <li>
-            <a href="{{request.route_url('bill.list')}}">Bills</a>
-          </li>
-	  {% block links %}{% endblock %}
-	</ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li>
-            <a href="{{request.route_url('feed.list')}}">
-              <i class="fa fa-rss fa-lg"></i>
-              Subscribe
-            </a>
-          </li>
-        </ul>
-        {% if request.url != request.route_url('home') %}
-	<form method="GET" action="{{request.route_url('search')}}" class="navbar-form navbar-right" role="search" style="width: 250px">
-          <div class="input-group">
-	    <input type="text" name="search" class="form-control" placeholder="Search for Bill here" value="{{request.params.get('search', '')}}">
-            <span class="input-group-btn">
-              <button type="submit" class="btn btn-default">Go</button>
-            </span>
-          </div>            
-	</form>          
-        {% endif %}
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+	  <ul class="nav navbar-nav">
+            <li>
+              <a href="{{request.route_url('bill.list')}}">Bills</a>
+            </li>
+	    {% block links %}{% endblock %}
+	  </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="{{request.route_url('feed.list')}}">
+                <i class="fa fa-rss fa-lg"></i>
+                Subscribe
+              </a>
+            </li>
+          </ul>
+          {% if request.url != request.route_url('home') %}
+	  <form method="GET" action="{{request.route_url('search')}}" class="navbar-form navbar-right" role="search">
+            <div class="input-group">
+	      <input type="text" name="search" class="form-control" placeholder="Search for Bill here" value="{{request.params.get('search', '')}}">
+              <span class="input-group-btn">
+                <button type="submit" class="btn btn-default">Go</button>
+              </span>
+            </div>            
+	  </form>          
+          {% endif %}          
+        </div>
       </div>
     </nav>
 

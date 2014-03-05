@@ -16,7 +16,7 @@
             Detail
           </div>
           <div class="panel-body">
-            <dl class="dl-horizontal">
+            <dl>
 	      <dt>Code:</dt><dd>{{bill['name']}}</dd>
 	      <dt>Name:</dt><dd>{{bill['description']}}</dd>
 	      <dt>Year:</dt><dd>{{bill['year'] or ''}}</dd>
@@ -30,7 +30,7 @@
             History
           </div>
           <div class="panel-body">
-            <dl class="dl-horizontal">
+            <dl>
 	      <dt>First Reading:</dt><dd>{{bill['history']['first_reading']}}</dd>
 	      <dt>Second Reading:</dt><dd>{{bill['history']['second_reading']}}</dd>
 	      <dt>Passed At:</dt><dd>{{bill['history']['passed_at']}}</dd>
