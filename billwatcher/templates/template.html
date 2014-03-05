@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{% block title %}Malaysian Parliament Bill Watcher{% endblock %}</title>
+    <title>{% block title %}Malaysian Parliament BillWatcher{% endblock %}</title>
     <meta name="description" content="Collection of bills debated in Malaysian Parliament">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -55,19 +55,18 @@
         <div class="col-lg-12">
           <div class="col-md-4">
             <dl>
-              <dt>This is an open source project</dt>
-              <dd>Our Code is in github you can help us by fork and contribute code, or report bug to us.</dd>
+              <dt>Sponsor</dt>
               <dd>
+                <a href="http://isif.asia/">
+                  <img src="{{request.static_url('billwatcher:static/img/isif.png')}}"/>
+                </a>
               </dd>
             </dl>
-            <ul id="github-links" class="pull-left list-inline">
-              <li>
-	        <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=klrkdekira&repo=BillWatcher-2.0&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
-              </li>
-              <li>
-	        <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=klrkdekira&repo=BillWatcher-2.0&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="102px" height="20px"></iframe>
-              </li>
-            </ul>
+            <dl>
+              <dt>The Team</dt>
+              <dd><a href="https://github.com/sweemeng">Swee Meng</a></dd>
+              <dd><a href="https://github.com/klrkdekira">Chee Leong</a></dd>
+            </dl>            
           </div>                  
           <div class="col-md-4">
             <dl>
@@ -81,27 +80,35 @@
           </div>
           <div class="col-md-4">
             <dl>
-              <dt>The Team</dt>
-              <dd><a href="https://github.com/sweemeng">Swee Meng</a></dd>
-              <dd><a href="https://github.com/klrkdekira">Chee Leong</a></dd>
-            </dl>            
-            <dl>
               <dt>Contacts</dt>
-              <dd>Email: <a href="mailto:sinarproject@gmail.com">sinarproject@gmail.com</a></dd>
+              <dd>Email: <a href="mailto:info@sinarproject.org">info@sinarproject.org</a></dd>
               <dd>
                 Twitter: <a href="https://twitter.com/sinarproject" id="twitter-link" class="twitter-follow-button" data-show-count="false">Follow @sinarproject</a>
                 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+              </dd>
+            </dl>
+            <dl>
+              <dt>This is an open source project</dt>
+              <dd>Our Code is in github you can help us by fork and contribute code, or report bug to us.</dd>
+              <dd>
+                <ul id="github-links" class="pull-left list-inline">
+                  <li>
+	            <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=klrkdekira&repo=BillWatcher-2.0&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+                  </li>
+                  <li>
+	            <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=klrkdekira&repo=BillWatcher-2.0&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="102px" height="20px"></iframe>
+                  </li>
+                </ul>
               </dd>
             </dl>
           </div>
         </div>
       </div>
     </div>
-</div>      
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-<script src="{{request.static_url('billwatcher:static/js/plugins.js')}}"></script>
-{% block js %}{% endblock %}
-</body>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="{{request.static_url('billwatcher:static/js/plugins.js')}}"></script>
+    {% block js %}{% endblock %}
+  </body>
 </html>
