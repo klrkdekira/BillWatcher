@@ -6,17 +6,17 @@ html {
 }
 body {
     /* Margin bottom by footer height */
-    margin-bottom: 180px;
+    margin-bottom: 200px;
 }
 #footer {
     position: absolute;
     bottom: 0;
     width: 100%;
     /* Set the fixed height of the footer here */
-    height: 180px;
-    /* height: 100%; */
-    background-color: #f5f5f5;
+    height: 200px;
 }
+
+
 
 #jumbo {
     height: 300px;    font-size: 20px;
@@ -58,4 +58,30 @@ body {
 #pager {
     display: none;
     margin: -20px 0;
+}
+
+@media screen and (min-width: 1024px) {
+    form[role=search] > .input-group {
+        max-width: 250px;
+    }
+
+    #footer {
+        background-color: #f5f5f5;
+    }
+
+    #bill-list th:first-child {
+        width: 120px;
+    }
+
+    #bill-list th:last-child {
+        width: 100px;
+    }
+
+    #bill-list th:nth-child(3) {
+        width: 200px;
+    }
+}
+
+.panel-heading > a {
+    color: #fff;
 }

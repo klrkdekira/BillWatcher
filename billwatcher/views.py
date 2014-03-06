@@ -61,6 +61,7 @@ class BillView(object):
                                                               ('name', -1)])
         return map(lambda bill: bill, bills)
         
+    @view_config(route_name='home', renderer='json', accept='application/json')
     @view_config(route_name='bill.list', renderer='json', accept='application/json')
     def api_list(self):
         return {'bills': self._list()}
@@ -148,11 +149,9 @@ class FeedView(object):
 
 @view_config(route_name='search', renderer='search.html', accept='text/html')
 def search(request):
-    search_param = request.params.get('search')
-    search_pattern = {"$regex": search_param}
-    search_dict = {'$or': [{'name': search_pattern},
-                           {'description': search_pattern}]}
-    results = (request.db.bills.find(search_dict, {'name': 1, 'description': 1, 'year': 1, 'status': 1})
-               .sort([('year', -1), ('name', -1)]))
-
-    return {'bills': results}
+    search_param = request.params.get('search', '')
+    query_dsl = {"fuzzy_like_this": {"like_text": search_param,
+                                     "fields": ['name', 'description']}}
+    res = request.es.search(size=30,
+                            body={"query": query_dsl})
+    return {'bills': res['hits']['hits']}

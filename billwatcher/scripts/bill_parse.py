@@ -82,8 +82,9 @@ def main(argv=sys.argv):
             item = q.get()
             try:
                 pdf_to_text(item)
-            finally:
-                q.task_done()
+            except Exception as e:
+                log.error(e)
+            q.task_done()
 
     for i in xrange(4):
         gevent.spawn(worker)

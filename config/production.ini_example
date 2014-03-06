@@ -15,6 +15,7 @@ pyramid.includes =
     pyramid_tm
 
 mongo_uri = mongodb://localhost:27017/billwatcher
+es_uri = localhost:9200
 
 [server:main]
 use = egg:gunicorn#main

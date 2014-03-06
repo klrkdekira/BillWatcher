@@ -17,15 +17,15 @@
 	  {% for bill in bills %}
 	  <tr>
             <td>
-              {{bill.name}}
+              {{bill['_source'].name}}
             </td>
 	    <td>
 	      <a href="{{request.route_url('bill.detail', bill_id=bill._id)}}">
-		{{bill.description}}
+		{{bill['_source'].description}}
 	      </a>
 	    </td>
-	    <td>{{bill.status.capitalize() if bill.status}}</td>
-	    <td>{{bill.year or ''}}</td>
+	    <td>{{bill['_source'].status.capitalize() if bill['_source'].status}}</td>
+	    <td>{{bill['_source'].year or ''}}</td>
 	  </tr>
 	  {% endfor %}
 	</tbody>
