@@ -9,6 +9,7 @@
     <title>{% block title %}Malaysian Parliament BillWatcher{% endblock %}</title>
     <meta name="description" content="Collection of bills debated in Malaysian Parliament">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block ogp %}{% endblock %}
 
     <link rel="alternate" href="{{request.route_url('feed.list')}}" type="application/rss+xml" title="RSS Feeds" />
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
@@ -51,9 +52,9 @@
               <span class="input-group-btn">
                 <button type="submit" class="btn btn-default">Go</button>
               </span>
-            </div>            
-	  </form>          
-          {% endif %}          
+            </div>
+	  </form>
+          {% endif %}
         </div>
       </div>
     </nav>
@@ -76,8 +77,8 @@
               <dt>The Team</dt>
               <dd><a href="https://github.com/sweemeng">Swee Meng</a></dd>
               <dd><a href="https://github.com/klrkdekira">Chee Leong</a></dd>
-            </dl>            
-          </div>                  
+            </dl>
+          </div>
           <div class="col-md-4">
             <dl>
               <dt>Who we are</dt>

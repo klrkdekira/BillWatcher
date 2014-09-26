@@ -20,7 +20,7 @@ def views_include(config):
     config.add_route('bill.doc', '/bill/doc/{bill_id}')
 
     config.add_route('feed.list', '/feed')
-    
+
     config.add_route('search', '/search')
 
 class HomeView(object):
@@ -34,7 +34,7 @@ class HomeView(object):
                         .sort([('year', -1), ('name', -1)])
                         .limit(5))
         return {'latest_bills': latest_bills}
-    
+
 class BillView(object):
     def __init__(self, request):
         self.request = request
@@ -60,17 +60,17 @@ class BillView(object):
                                           'status': 1}).sort([('year', -1),
                                                               ('name', -1)])
         return map(lambda bill: bill, bills)
-        
+
     @view_config(route_name='home', renderer='json', accept='application/json')
     @view_config(route_name='bill.list', renderer='json', accept='application/json')
     def api_list(self):
         return {'bills': self._list()}
-        
+
     @view_config(route_name='bill.list', renderer='bill/list.html', accept='text/html')
     def web_list(self):
         p = self.params
         page = p.get('page', '1')
-        
+
         bills = self._list()
         page_url = paginate.PageURL_WebOb(self.request)
         data = paginate.Page(bills, page,
@@ -119,7 +119,7 @@ class BillView(object):
         resp.content_disposition = 'filename={filename}'.format(filename=document['name'])
         resp.content_type = pdf_doc.content_type
         resp.body_file.write(pdf_doc.read())
-        return resp            
+        return resp
 
 class FeedView(object):
     def __init__(self, request):
@@ -145,7 +145,7 @@ class FeedView(object):
         resp = Response()
         resp.content_type = 'application/rss+xml'
         feed.write(resp.body_file, 'utf-8')
-        return resp        
+        return resp
 
 @view_config(route_name='search', renderer='search.html', accept='text/html')
 def search(request):
