@@ -3,6 +3,7 @@ import logging
 from pyramid.view import view_config
 from pyramid.i18n import TranslationStringFactory
 from pyramid.response import Response
+from pyramid.renderers import render_to_response
 from pyramid.exceptions import HTTPNotFound
 
 from webhelpers import feedgenerator, paginate
@@ -96,11 +97,17 @@ class BillView(object):
             raise HTTPNotFound()
         return bill
 
-    @view_config(route_name='bill.detail', renderer='bill/detail.html', accept='text/html')
     @view_config(route_name='bill.detail', renderer='json', accept='application/json')
+    @view_config(route_name='bill.detail', renderer='bill/detail.html', accept='text/html')
     def view(self):
         bill_id = self.request.matchdict['bill_id']
         bill = self._get_bill(bill_id)
+        if self.request.accept == '*/*':
+            resp = render_to_response('bill/detail.html',
+                                      {'bill': bill},
+                                      request=self.request)
+            resp.content_type = 'text/html'
+            return resp
         return {'bill': bill}
 
     @view_config(route_name='bill.doc')
