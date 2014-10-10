@@ -1,5 +1,11 @@
 {% extends "template.html" %}
 {% block title %}{{bill['name']}} - {{bill['description']}}{% endblock %}
+{% block ogp %}
+<meta property="og:title" content="{{bill['name']}}" />
+<meta property="og:type" content="parliament.bill" />
+<meta property="og:url" content="{{request.url}}" />
+<meta property="og:description" content="{{bill['description']}}" />
+{% endblock %}
 {% block css %}
 <style>
 .fb-comments, .fb-comments span[style], .fb-comments iframe[style] {width: 100% !important;}
@@ -17,10 +23,10 @@
           </div>
           <div class="panel-body">
             <dl>
-	      <dt>Code:</dt><dd>{{bill['name']}}</dd>
-	      <dt>Name:</dt><dd>{{bill['description']}}</dd>
-	      <dt>Year:</dt><dd>{{bill['year'] or ''}}</dd>
-	      <dt>Status:</dt><dd>{{bill['status'].capitalize() if bill['status']}}</dd>
+              <dt>Code:</dt><dd>{{bill['name']}}</dd>
+              <dt>Name:</dt><dd>{{bill['description']}}</dd>
+              <dt>Year:</dt><dd>{{bill['year'] or ''}}</dd>
+              <dt>Status:</dt><dd>{{bill['status'].capitalize() if bill['status']}}</dd>
               <dt>Presented by:</dt><dd>{{bill['presented_by']}}</dd>
             </dl>
           </div>
@@ -31,9 +37,9 @@
           </div>
           <div class="panel-body">
             <dl>
-	      <dt>First Reading:</dt><dd>{{bill['history']['first_reading']}}</dd>
-	      <dt>Second Reading:</dt><dd>{{bill['history']['second_reading']}}</dd>
-	      <dt>Passed At:</dt><dd>{{bill['history']['passed_at']}}</dd>
+              <dt>First Reading:</dt><dd>{{bill['history']['first_reading']}}</dd>
+              <dt>Second Reading:</dt><dd>{{bill['history']['second_reading']}}</dd>
+              <dt>Passed At:</dt><dd>{{bill['history']['passed_at']}}</dd>
             </dl>
           </div>
         </div>
@@ -47,7 +53,7 @@
         <div class="fb-like" data-href="{{request.url}}" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
         <h3>Comments</h3>
         <hr />
-        <div class="fb-comments" data-href="{{request.url}}" data-numposts="20" data-colorscheme="light"></div>        
+        <div class="fb-comments" data-href="{{request.url}}" data-numposts="20" data-colorscheme="light"></div>
       </div>
     </div>
   </div>

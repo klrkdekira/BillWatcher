@@ -1,6 +1,10 @@
 billwatcher README
 ==================
 
+The Billwatcher site is hosted at 
+
+http://billwatcher.sinarproject.org
+
 Getting Started
 ---------------
 

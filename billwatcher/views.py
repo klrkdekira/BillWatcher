@@ -3,6 +3,7 @@ import logging
 from pyramid.view import view_config
 from pyramid.i18n import TranslationStringFactory
 from pyramid.response import Response
+from pyramid.renderers import render_to_response
 from pyramid.exceptions import HTTPNotFound
 
 from webhelpers import feedgenerator, paginate
@@ -20,7 +21,7 @@ def views_include(config):
     config.add_route('bill.doc', '/bill/doc/{bill_id}')
 
     config.add_route('feed.list', '/feed')
-    
+
     config.add_route('search', '/search')
 
 class HomeView(object):
@@ -34,7 +35,7 @@ class HomeView(object):
                         .sort([('year', -1), ('name', -1)])
                         .limit(5))
         return {'latest_bills': latest_bills}
-    
+
 class BillView(object):
     def __init__(self, request):
         self.request = request
@@ -60,17 +61,17 @@ class BillView(object):
                                           'status': 1}).sort([('year', -1),
                                                               ('name', -1)])
         return map(lambda bill: bill, bills)
-        
+
     @view_config(route_name='home', renderer='json', accept='application/json')
     @view_config(route_name='bill.list', renderer='json', accept='application/json')
     def api_list(self):
         return {'bills': self._list()}
-        
+
     @view_config(route_name='bill.list', renderer='bill/list.html', accept='text/html')
     def web_list(self):
         p = self.params
         page = p.get('page', '1')
-        
+
         bills = self._list()
         page_url = paginate.PageURL_WebOb(self.request)
         data = paginate.Page(bills, page,
@@ -96,12 +97,23 @@ class BillView(object):
             raise HTTPNotFound()
         return bill
 
-    @view_config(route_name='bill.detail', renderer='bill/detail.html', accept='text/html')
-    @view_config(route_name='bill.detail', renderer='json', accept='application/json')
+    # @view_config(route_name='bill.detail', renderer='json', accept='application/json')
+    # @view_config(route_name='bill.detail', renderer='bill/detail.html', accept='text/html')
+    @view_config(route_name='bill.detail', renderer='bill/detail.html')
     def view(self):
         bill_id = self.request.matchdict['bill_id']
         bill = self._get_bill(bill_id)
-        return {'bill': bill}
+        if self.request.accept == 'application/json':
+            resp = render_to_response('json',
+                                      {'bill': bill},
+                                      request=self.request)
+            resp.content_type = 'application/json'
+        else:
+            resp = render_to_response('bill/detail.html',
+                                      {'bill': bill},
+                                      request=self.request)
+            resp.content_type = 'text/html'
+        return resp
 
     @view_config(route_name='bill.doc')
     def doc(self):
@@ -119,7 +131,7 @@ class BillView(object):
         resp.content_disposition = 'filename={filename}'.format(filename=document['name'])
         resp.content_type = pdf_doc.content_type
         resp.body_file.write(pdf_doc.read())
-        return resp            
+        return resp
 
 class FeedView(object):
     def __init__(self, request):
@@ -145,7 +157,7 @@ class FeedView(object):
         resp = Response()
         resp.content_type = 'application/rss+xml'
         feed.write(resp.body_file, 'utf-8')
-        return resp        
+        return resp
 
 @view_config(route_name='search', renderer='search.html', accept='text/html')
 def search(request):
