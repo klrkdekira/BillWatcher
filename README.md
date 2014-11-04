@@ -1,14 +1,14 @@
-billwatcher README
-==================
+BillWatcher
+===========
 
-The Billwatcher site is hosted at 
+The BillWatcher site is hosted at 
 
 http://billwatcher.sinarproject.org
 
 Getting Started
 ---------------
 
-- cd <directory containing this file>
+- cd `<directory containing this file>`
 
 - $venv/bin/python bootstrap.py
 
@@ -18,6 +18,9 @@ Getting Started
 
 TODO
 ----
+
 - i18n
+
 - Search
+
 - Error page
