@@ -1,0 +1,3 @@
+5 17 * * *  /opt/apps/billwatcher/bin/bill_download /opt/apps/billwatcher/config/development.ini
+10 17 * * * /opt/apps/billwatcher/bin/bill_parse /opt/apps/billwatcher/config/development.ini
+15 17 * * * /opt/apps/billwatcher/bin/bill_to_es /opt/apps/billwatcher/config/development.ini
