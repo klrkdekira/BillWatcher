@@ -60,6 +60,10 @@ body {
     margin: -20px 0;
 }
 
+#document_file {
+  margin-bottom: 20px;
+}
+
 @media screen and (min-width: 1024px) {
     form[role=search] > .input-group {
         max-width: 250px;
