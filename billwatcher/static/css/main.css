@@ -1,13 +1,16 @@
-/* Sticky footer styles
-   -------------------------------------------------- */
+/* Sticky footer styles */
+/* -------------------- */
+
 html {
     position: relative;
     min-height: 100%;
 }
+
 body {
     /* Margin bottom by footer height */
     margin-bottom: 200px;
 }
+
 #footer {
     position: absolute;
     bottom: 0;
@@ -16,11 +19,9 @@ body {
     height: 200px;
 }
 
-
-
 #jumbo {
-    height: 300px;    font-size: 20px;
-
+    height: 300px;
+    font-size: 20px;
     background: none;
 }
 
@@ -58,6 +59,11 @@ body {
 #pager {
     display: none;
     margin: -20px 0;
+}
+
+#document_file {
+    /* Fix issue #15 - Inconsistent margin. */
+    margin-bottom: 20px;
 }
 
 @media screen and (min-width: 1024px) {
