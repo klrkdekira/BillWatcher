@@ -1,0 +1,27 @@
+server {
+       listen   80;
+       server_name      localhost;
+
+       access_log       /var/log/nginx/billwatcher.access.log;
+       error_log        /var/log/nginx/billwatcher.error.log;
+
+       location / {
+                root    /opt/apps/billwatcher/billwatcher/static/;
+                if (!-f $request_filename) {
+                   proxy_pass              http://127.0.0.1:9001;
+                }
+                include custom_proxy.conf;
+       }
+
+       # location /portia {
+       #                proxy_set_header        X-Script-Name /static;
+       #                proxy_pass               http://127.0.0.1:9999;
+       #                include custom_proxy.conf;
+       # }
+
+       location /supervisor/ {
+                proxy_pass  http://127.0.0.1:10001/;
+                proxy_set_header        Host $host;
+                proxy_buffering         off;
+       }
+}

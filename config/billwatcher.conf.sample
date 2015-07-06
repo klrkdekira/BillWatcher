@@ -1,0 +1,9 @@
+[program:billwatcher]
+autorestart=true
+directory=/opt/apps/billwatcher
+command = /opt/apps/billwatcher/bin/pserve /opt/apps/billwatcher/config/production.ini
+user=billwatcher
+process_name = billwatcher
+priority = 10
+redirect_stderr = false
+stdout_logfile=/var/log/supervisor/billwatcher.log
