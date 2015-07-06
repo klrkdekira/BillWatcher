@@ -150,7 +150,8 @@ class FeedView(object):
 
         bills = self._list()
         for bill in bills:
-            feed.add_item(title=bill['name'],
+            link_name = "%s - %s" % (bill['name'], bill['description'])
+            feed.add_item(title=link_name,
                           link=self.request.route_url('bill.detail', bill_id=bill['_id']),
                           description=bill['description'])
 
