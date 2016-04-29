@@ -21,7 +21,7 @@
   <body>
     <nav class="navbar navbar-default navbar-static-top" role="navigation">
       <div class="container-fluid">
-	<a class="navbar-brand" href="{{request.route_url('home')}}">BillWatcher</a>
+	<a class="navbar-brand" href="{{request.route_url('home')}}" title="BillWatcher">BillWatcher</a>
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
@@ -75,8 +75,8 @@
             </dl>
             <dl>
               <dt>The Team</dt>
-              <dd><a href="https://github.com/sweemeng">Swee Meng</a></dd>
-              <dd><a href="https://github.com/klrkdekira">Chee Leong</a></dd>
+              <dd><a href="https://github.com/sweemeng" title="Swee Meng's GitHub.">Swee Meng</a></dd>
+              <dd><a href="https://github.com/klrkdekira" title="Chee Leong's GitHub.">Chee Leong</a></dd>
             </dl>
           </div>
           <div class="col-xs-6 col-md-4">
@@ -92,7 +92,7 @@
           <div class="col-xs-12 col-md-4">
             <dl>
               <dt>Contacts</dt>
-              <dd>Email: <a href="mailto:info@sinarproject.org">info@sinarproject.org</a></dd>
+              <dd>Email: <a href="mailto:info@sinarproject.org" title="Email Sinar Project.">info@sinarproject.org</a></dd>
               <dd>
                 Twitter: <a href="https://twitter.com/sinarproject" id="twitter-link" class="twitter-follow-button" data-show-count="false">Follow @sinarproject</a>
                 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
@@ -120,15 +120,15 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-29734766-2', 'auto');
-  ga('send', 'pageview');
+      ga('create', 'UA-29734766-2', 'auto');
+      ga('send', 'pageview');
 
-</script>
+    </script>
     <script src="{{request.static_url('billwatcher:static/js/plugins.js')}}"></script>
     {% block js %}{% endblock %}
   </body>
