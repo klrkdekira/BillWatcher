@@ -44,16 +44,22 @@ body {
     font-size: 30px;
 }
 
-#sinar-logo {
-    width: 200px;
-}
-
 #footer {
     border-top: 2px solid #eee;
 }
 
 #footer > .container {
     padding: 20px 10px 0;
+}
+
+#isif-logo {
+    width: 100%;
+    max-width: 177px;
+}
+
+#sinar-logo {
+    width: 100%;
+    max-width: 200px;
 }
 
 #pager {
