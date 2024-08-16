@@ -7,4 +7,6 @@ ENV DATABASE_URL ${DEFAULT_DATABASE_URL}
 
 WORKDIR /app
 
-CMD ["python", '-m', 'http.server', ${HTTP_PORT}]
+EXPOSE 80
+
+CMD python3 -m http.server ${HTTP_PORT}
