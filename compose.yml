@@ -10,6 +10,9 @@ services:
     depends_on:
       db:
         condition: service_healthy
+    networks:
+      - sinar-instance
+    restart: unless-stopped
   db:
     image: postgres:16.4-alpine3.20
     shm_size: 256mb
@@ -27,7 +30,7 @@ services:
       timeout: 5s
       retries: 5
     networks:
-      - sinar
+      - sinar-instance
     restart: unless-stopped
 networks:
   sinar-instance:
