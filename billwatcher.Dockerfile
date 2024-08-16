@@ -1,0 +1,10 @@
+FROM python:3.12.5-alpine3.20 
+
+ARG HTTP_PORT=80
+ARG DEFAULT_DATABASE_URL
+
+ENV DATABASE_URL ${DEFAULT_DATABASE_URL}
+
+WORKDIR /app
+
+CMD ["python", '-m', 'http.server', ${HTTP_PORT}]
