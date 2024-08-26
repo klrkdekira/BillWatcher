@@ -1,0 +1,32 @@
+{
+  "year": 1993,
+  "bill": "D.R.05/1993 - Constitution (Amendment) (No. 2) Bill 1993 (Passed)",
+  "id": "0_1993_4",
+  "children": [
+    {
+      "text": "D.R.05/1993",
+      "id": "0_1993_4_1"
+    },
+    {
+      "text": "First reading:",
+      "id": "0_1993_4_2"
+    },
+    {
+      "text": "The second reading:",
+      "id": "0_1993_4_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_1993_4_3"
+    },
+    {
+      "text": "Passed At:",
+      "id": "0_1993_4_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_1993_4_3"
+    }
+  ],
+  "document": "/files/billindex/pdf/1993/DR051993E.pdf"
+}

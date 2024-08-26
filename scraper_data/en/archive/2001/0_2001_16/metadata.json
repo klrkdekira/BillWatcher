@@ -1,0 +1,32 @@
+{
+  "year": 2001,
+  "bill": "D.R 24/2001 - Constitution (Amendment) (No.2) Bill 2001 (Passed)",
+  "id": "0_2001_16",
+  "children": [
+    {
+      "text": "D.R 24/2001",
+      "id": "0_2001_16_1"
+    },
+    {
+      "text": "First reading:",
+      "id": "0_2001_16_2"
+    },
+    {
+      "text": "The second reading:",
+      "id": "0_2001_16_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_2001_16_3"
+    },
+    {
+      "text": "Passed At:",
+      "id": "0_2001_16_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_2001_16_3"
+    }
+  ],
+  "document": "/files/billindex/pdf/2001/DR 24_2001 - BI.pdf"
+}

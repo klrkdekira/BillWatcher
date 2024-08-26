@@ -1,0 +1,32 @@
+{
+  "year": 2001,
+  "bill": "D.R 4/2001 - National Registration (Amendment) Bill 2001 (Passed)",
+  "id": "0_2001_33",
+  "children": [
+    {
+      "text": "D.R 4/2001",
+      "id": "0_2001_33_1"
+    },
+    {
+      "text": "First reading:",
+      "id": "0_2001_33_2"
+    },
+    {
+      "text": "The second reading:",
+      "id": "0_2001_33_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_2001_33_3"
+    },
+    {
+      "text": "Passed At:",
+      "id": "0_2001_33_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_2001_33_3"
+    }
+  ],
+  "document": "/files/billindex/pdf/2001/Bill DR 4.pdf"
+}

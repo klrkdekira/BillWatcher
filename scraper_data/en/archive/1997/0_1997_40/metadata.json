@@ -1,0 +1,32 @@
+{
+  "year": 1997,
+  "bill": "D.R.46/1997 - Finance (No. 2) Bill 1997 (Passed)",
+  "id": "0_1997_40",
+  "children": [
+    {
+      "text": "D.R.46/1997",
+      "id": "0_1997_40_1"
+    },
+    {
+      "text": "First reading:",
+      "id": "0_1997_40_2"
+    },
+    {
+      "text": "The second reading:",
+      "id": "0_1997_40_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_1997_40_3"
+    },
+    {
+      "text": "Passed At:",
+      "id": "0_1997_40_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_1997_40_3"
+    }
+  ],
+  "document": "/files/billindex/pdf/1997/Bill DR 46.pdf"
+}

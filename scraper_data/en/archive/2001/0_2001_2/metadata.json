@@ -1,0 +1,32 @@
+{
+  "year": 2001,
+  "bill": "D.R 11/2001 - Sales Tax (Amendment) Bill 2001 (Passed)",
+  "id": "0_2001_2",
+  "children": [
+    {
+      "text": "D.R 11/2001",
+      "id": "0_2001_2_1"
+    },
+    {
+      "text": "First reading:",
+      "id": "0_2001_2_2"
+    },
+    {
+      "text": "The second reading:",
+      "id": "0_2001_2_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_2001_2_3"
+    },
+    {
+      "text": "Passed At:",
+      "id": "0_2001_2_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_2001_2_3"
+    }
+  ],
+  "document": "/files/billindex/pdf/2001/Bill DR 11.pdf"
+}

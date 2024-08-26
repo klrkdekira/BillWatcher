@@ -1,0 +1,32 @@
+{
+  "year": 2005,
+  "bill": "D.R 2/2005 - Government Investment (Amendment) Bill 2005 (Passed)",
+  "id": "0_2005_1",
+  "children": [
+    {
+      "text": "D.R 2/2005",
+      "id": "0_2005_1_1"
+    },
+    {
+      "text": "First reading:",
+      "id": "0_2005_1_2"
+    },
+    {
+      "text": "The second reading:",
+      "id": "0_2005_1_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_2005_1_3"
+    },
+    {
+      "text": "Passed At:",
+      "id": "0_2005_1_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_2005_1_3"
+    }
+  ],
+  "document": "/files/billindex/pdf/2005/DR 22005E.pdf"
+}

@@ -1,0 +1,32 @@
+{
+  "year": 2014,
+  "bill": "D.R.1/2014 - Supplementary Budget (2013) 2014 Bill (Passed)",
+  "id": "0_2014_27",
+  "children": [
+    {
+      "text": "D.R.1/2014",
+      "id": "0_2014_27_1"
+    },
+    {
+      "text": "First reading:24/03/2014",
+      "id": "0_2014_27_2"
+    },
+    {
+      "text": "The second reading:",
+      "id": "0_2014_27_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_2014_27_3"
+    },
+    {
+      "text": "Passed At:",
+      "id": "0_2014_27_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_2014_27_3"
+    }
+  ],
+  "document": "/files/billindex/pdf/2014/DR 1_2014 BI.pdf"
+}

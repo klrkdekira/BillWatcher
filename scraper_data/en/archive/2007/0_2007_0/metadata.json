@@ -1,0 +1,32 @@
+{
+  "year": 2007,
+  "bill": "D.R.01/2007 - Environmental Quality (Amendment) Bill 2007 (Passed)",
+  "id": "0_2007_0",
+  "children": [
+    {
+      "text": "D.R.01/2007",
+      "id": "0_2007_0_1"
+    },
+    {
+      "text": "First reading:",
+      "id": "0_2007_0_2"
+    },
+    {
+      "text": "The second reading:",
+      "id": "0_2007_0_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_2007_0_3"
+    },
+    {
+      "text": "Passed At:",
+      "id": "0_2007_0_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_2007_0_3"
+    }
+  ],
+  "document": "/files/billindex/pdf/2007/DR 012007E.pdf"
+}

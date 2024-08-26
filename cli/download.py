@@ -1,11 +1,13 @@
+import io
 import os
 import sys
 
 from sqlalchemy import exists
 
-from sinar_billwatcher.downloader import Language, download_archive_xml
-from sinar_billwatcher.model import Document, connect_db
-from sinar_billwatcher.storage import connect_s3
+from billwatcher.download import download_archive_xml
+from billwatcher.model import Document, connect_db
+from billwatcher.storage import connect_s3
+from billwatcher.types import Language
 
 
 def main():
@@ -19,8 +21,8 @@ def main():
     s3_endpoint = "{}:{}".format(
         os.environ.get("CONTAINER_INTERFACE"), os.environ.get("MINIO_PORT")
     )
-    s3_access_key = os.environ.get("MINIO_ROOT_USER")
-    s3_secret_key = os.environ.get("MINIO_ROOT_PASSWORD")
+    s3_access_key = os.environ.get("MINIO_ROOT_USER") or ""
+    s3_secret_key = os.environ.get("MINIO_ROOT_PASSWORD") or ""
 
     s3 = connect_s3(
         endpoint=s3_endpoint,
@@ -31,12 +33,16 @@ def main():
     with Session() as session:
         try:
             response = download_archive_xml(Language.EN)
-            print(response.url)
             data_exists = session.query(
                 exists().where(Document.file_hash == response.hash)
             ).scalar()
             if not data_exists:
-                s3.fput_object("billwatcher", hash, response.data)
+                s3.put_object(
+                    "billwatcher",
+                    response.hash,
+                    io.BytesIO(response.data.encode("utf-8")),
+                    len(response.data),
+                )
 
                 doc = Document()
                 doc.title = "root_en"
@@ -51,3 +57,7 @@ def main():
             print(e, file=sys.stderr)
             session.rollback()
             sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()

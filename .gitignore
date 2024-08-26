@@ -42,4 +42,5 @@ nosetests.xml
 # Application related
 billwatcher/files/
 
+.vscode
 data

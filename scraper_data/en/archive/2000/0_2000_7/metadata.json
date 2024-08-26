@@ -1,0 +1,32 @@
+{
+  "year": 2000,
+  "bill": "D.R.08/2000 - Finance Bill 2000 (Passed)",
+  "id": "0_2000_7",
+  "children": [
+    {
+      "text": "D.R.08/2000",
+      "id": "0_2000_7_1"
+    },
+    {
+      "text": "First reading:",
+      "id": "0_2000_7_2"
+    },
+    {
+      "text": "The second reading:",
+      "id": "0_2000_7_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_2000_7_3"
+    },
+    {
+      "text": "Passed At:",
+      "id": "0_2000_7_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_2000_7_3"
+    }
+  ],
+  "document": "/files/billindex/pdf/2000/DR082000E.pdf"
+}

@@ -1,0 +1,32 @@
+{
+  "year": 1999,
+  "bill": "D.R.18/1999 - Consumer Protection Bill 1999 (Passed)",
+  "id": "0_1999_16",
+  "children": [
+    {
+      "text": "D.R.18/1999",
+      "id": "0_1999_16_1"
+    },
+    {
+      "text": "First reading:",
+      "id": "0_1999_16_2"
+    },
+    {
+      "text": "The second reading:",
+      "id": "0_1999_16_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_1999_16_3"
+    },
+    {
+      "text": "Passed At:",
+      "id": "0_1999_16_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_1999_16_3"
+    }
+  ],
+  "document": "/files/billindex/pdf/1999/DR181999E.pdf"
+}

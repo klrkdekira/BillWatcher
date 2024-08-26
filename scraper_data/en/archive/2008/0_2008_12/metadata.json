@@ -1,0 +1,32 @@
+{
+  "year": 2008,
+  "bill": "D.R.21/2008 - Malaysian Anti-Corruption Commission Bill 2008 (Passed)",
+  "id": "0_2008_12",
+  "children": [
+    {
+      "text": "D.R.21/2008",
+      "id": "0_2008_12_1"
+    },
+    {
+      "text": "First reading:",
+      "id": "0_2008_12_2"
+    },
+    {
+      "text": "The second reading:",
+      "id": "0_2008_12_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_2008_12_3"
+    },
+    {
+      "text": "Passed At:",
+      "id": "0_2008_12_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_2008_12_3"
+    }
+  ],
+  "document": "/files/billindex/pdf/2008/DR212008E.pdf"
+}

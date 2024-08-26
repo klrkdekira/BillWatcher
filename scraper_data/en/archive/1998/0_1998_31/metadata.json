@@ -1,0 +1,32 @@
+{
+  "year": 1998,
+  "bill": "D.R.36/1998 - Supply (1999) Bill 1998 (Passed)",
+  "id": "0_1998_31",
+  "children": [
+    {
+      "text": "D.R.36/1998",
+      "id": "0_1998_31_1"
+    },
+    {
+      "text": "First reading:",
+      "id": "0_1998_31_2"
+    },
+    {
+      "text": "The second reading:",
+      "id": "0_1998_31_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_1998_31_3"
+    },
+    {
+      "text": "Passed At:",
+      "id": "0_1998_31_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_1998_31_3"
+    }
+  ],
+  "document": "/files/billindex/pdf/1998/Bill DR 36.pdf"
+}

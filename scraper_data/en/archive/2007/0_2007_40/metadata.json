@@ -1,0 +1,32 @@
+{
+  "year": 2007,
+  "bill": "D.R.44/2007 - Finance Bill 2007 (Passed)",
+  "id": "0_2007_40",
+  "children": [
+    {
+      "text": "D.R.44/2007",
+      "id": "0_2007_40_1"
+    },
+    {
+      "text": "First reading:",
+      "id": "0_2007_40_2"
+    },
+    {
+      "text": "The second reading:",
+      "id": "0_2007_40_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_2007_40_3"
+    },
+    {
+      "text": "Passed At:",
+      "id": "0_2007_40_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_2007_40_3"
+    }
+  ],
+  "document": "/files/billindex/pdf/2007/DR442007E.pdf"
+}

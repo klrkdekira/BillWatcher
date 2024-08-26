@@ -1,0 +1,32 @@
+{
+  "year": 1998,
+  "bill": "D.R.04/1998 - Supplementary Supply (1997) Bill 1998 (Passed)",
+  "id": "0_1998_3",
+  "children": [
+    {
+      "text": "D.R.04/1998",
+      "id": "0_1998_3_1"
+    },
+    {
+      "text": "First reading:",
+      "id": "0_1998_3_2"
+    },
+    {
+      "text": "The second reading:",
+      "id": "0_1998_3_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_1998_3_3"
+    },
+    {
+      "text": "Passed At:",
+      "id": "0_1998_3_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_1998_3_3"
+    }
+  ],
+  "document": "/files/billindex/pdf/1998/Bill DR 4.pdf"
+}

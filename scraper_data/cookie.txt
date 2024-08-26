@@ -1,0 +1,6 @@
+# Netscape HTTP Cookie File
+# http://curl.haxx.se/rfc/cookie_spec.html
+# This is a generated file!  Do not edit.
+
+www.parlimen.gov.my	FALSE	/	FALSE		GENPRO_SESSION	1lsiof9r259n1t7jvi9pe4jjo7
+www.parlimen.gov.my	FALSE	/	FALSE	1756207145	cookiesession1	678B2867BEA29E09357B7209822F1CE4

@@ -1,0 +1,32 @@
+{
+  "year": 2001,
+  "bill": "D.R 20/2001 - Supplementary Supply (2001) Bill 2001 (Passed)",
+  "id": "0_2001_12",
+  "children": [
+    {
+      "text": "D.R 20/2001",
+      "id": "0_2001_12_1"
+    },
+    {
+      "text": "First reading:",
+      "id": "0_2001_12_2"
+    },
+    {
+      "text": "The second reading:",
+      "id": "0_2001_12_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_2001_12_3"
+    },
+    {
+      "text": "Passed At:",
+      "id": "0_2001_12_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_2001_12_3"
+    }
+  ],
+  "document": "/files/billindex/pdf/2001/Bill DR 20.pdf"
+}

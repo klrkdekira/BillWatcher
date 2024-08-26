@@ -1,0 +1,32 @@
+{
+  "year": 1990,
+  "bill": "D.R.13/1990 - Supplementary Supply (1989 and 1990) Bill 1990 (Passed)",
+  "id": "0_1990_12",
+  "children": [
+    {
+      "text": "D.R.13/1990",
+      "id": "0_1990_12_1"
+    },
+    {
+      "text": "First reading:",
+      "id": "0_1990_12_2"
+    },
+    {
+      "text": "The second reading:",
+      "id": "0_1990_12_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_1990_12_3"
+    },
+    {
+      "text": "Passed At:",
+      "id": "0_1990_12_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_1990_12_3"
+    }
+  ],
+  "document": "/files/billindex/pdf/1990/DR131990E.pdf"
+}

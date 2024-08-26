@@ -1,0 +1,32 @@
+{
+  "year": 2010,
+  "bill": "D.R.02/2010 - Supplementary Supply (2009) Bill 2010 (Passed)",
+  "id": "0_2010_1",
+  "children": [
+    {
+      "text": "D.R.02/2010",
+      "id": "0_2010_1_1"
+    },
+    {
+      "text": "First reading:",
+      "id": "0_2010_1_2"
+    },
+    {
+      "text": "The second reading:",
+      "id": "0_2010_1_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_2010_1_3"
+    },
+    {
+      "text": "Passed At:",
+      "id": "0_2010_1_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_2010_1_3"
+    }
+  ],
+  "document": "/files/billindex/pdf/2010/DR022010E.pdf"
+}

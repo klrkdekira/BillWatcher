@@ -1,0 +1,32 @@
+{
+  "year": 1991,
+  "bill": "D.R.01/1991 - Telecommunications (Amendment) Bill 1991 (Passed)",
+  "id": "0_1991_0",
+  "children": [
+    {
+      "text": "D.R.01/1991",
+      "id": "0_1991_0_1"
+    },
+    {
+      "text": "First reading:",
+      "id": "0_1991_0_2"
+    },
+    {
+      "text": "The second reading:",
+      "id": "0_1991_0_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_1991_0_3"
+    },
+    {
+      "text": "Passed At:",
+      "id": "0_1991_0_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_1991_0_3"
+    }
+  ],
+  "document": "/files/billindex/pdf/1991/DR011991E.pdf"
+}

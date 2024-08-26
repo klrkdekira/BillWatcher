@@ -1,0 +1,32 @@
+{
+  "year": 2002,
+  "bill": "D.R.33/2002 - Finance (No. 2) Bill 2002 (Passed)",
+  "id": "0_2002_5",
+  "children": [
+    {
+      "text": "D.R.33/2002",
+      "id": "0_2002_5_1"
+    },
+    {
+      "text": "First reading:",
+      "id": "0_2002_5_2"
+    },
+    {
+      "text": "The second reading:",
+      "id": "0_2002_5_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_2002_5_3"
+    },
+    {
+      "text": "Passed At:",
+      "id": "0_2002_5_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_2002_5_3"
+    }
+  ],
+  "document": "/files/billindex/pdf/2002/BILL-DR-33.pdf"
+}

@@ -1,0 +1,32 @@
+{
+  "year": 2001,
+  "bill": "D.R 13/2001 - Excise (Amendment) Bill 2001 (Passed)",
+  "id": "0_2001_4",
+  "children": [
+    {
+      "text": "D.R 13/2001",
+      "id": "0_2001_4_1"
+    },
+    {
+      "text": "First reading:",
+      "id": "0_2001_4_2"
+    },
+    {
+      "text": "The second reading:",
+      "id": "0_2001_4_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_2001_4_3"
+    },
+    {
+      "text": "Passed At:",
+      "id": "0_2001_4_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_2001_4_3"
+    }
+  ],
+  "document": "/files/billindex/pdf/2001/Bill DR 13.pdf"
+}

@@ -1,0 +1,32 @@
+{
+  "year": 2000,
+  "bill": "D.R.02/2000 - Rang Undang-Undang Institut Teknologi MARA (Pindaan) 2000 (Lulus)",
+  "id": "0_2000_1",
+  "children": [
+    {
+      "text": "D.R.02/2000",
+      "id": "0_2000_1_1"
+    },
+    {
+      "text": "Bacaan Pertama Pada:",
+      "id": "0_2000_1_2"
+    },
+    {
+      "text": "Bacaan Kedua Pada:",
+      "id": "0_2000_1_2"
+    },
+    {
+      "text": "Dibentang Oleh:",
+      "id": "0_2000_1_3"
+    },
+    {
+      "text": "Diluluskan Pada:",
+      "id": "0_2000_1_2"
+    },
+    {
+      "text": "Dibentang Oleh:",
+      "id": "0_2000_1_3"
+    }
+  ],
+  "document": "/files/billindex/pdf/2000/DR022000.pdf"
+}

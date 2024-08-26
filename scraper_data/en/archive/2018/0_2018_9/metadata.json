@@ -1,0 +1,32 @@
+{
+  "year": 2018,
+  "bill": "D.R.10/2018 - Sales Tax Bill 2018 (Passed)",
+  "id": "0_2018_9",
+  "children": [
+    {
+      "text": "D.R.10/2018",
+      "id": "0_2018_9_1"
+    },
+    {
+      "text": "First reading:31/07/2018",
+      "id": "0_2018_9_2"
+    },
+    {
+      "text": "The second reading:07/08/2018",
+      "id": "0_2018_9_2"
+    },
+    {
+      "text": "Presented by:YB Tuan Lim Guan Eng - Menteri Kewangan",
+      "id": "0_2018_9_3"
+    },
+    {
+      "text": "Passed At:07/08/2018",
+      "id": "0_2018_9_2"
+    },
+    {
+      "text": "Presented by:YB Tuan Lim Guan Eng - Menteri Kewangan",
+      "id": "0_2018_9_3"
+    }
+  ],
+  "document": "/files/billindex/pdf/2018/D.R.10_2018-eng.pdf"
+}

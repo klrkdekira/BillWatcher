@@ -1,0 +1,32 @@
+{
+  "year": 2010,
+  "bill": "D.R.04/2010 - Strategic Trade Bill 2010 (Passed)",
+  "id": "0_2010_3",
+  "children": [
+    {
+      "text": "D.R.04/2010",
+      "id": "0_2010_3_1"
+    },
+    {
+      "text": "First reading:",
+      "id": "0_2010_3_2"
+    },
+    {
+      "text": "The second reading:",
+      "id": "0_2010_3_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_2010_3_3"
+    },
+    {
+      "text": "Passed At:",
+      "id": "0_2010_3_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_2010_3_3"
+    }
+  ],
+  "document": "/files/billindex/pdf/2010/DR042010E.pdf"
+}

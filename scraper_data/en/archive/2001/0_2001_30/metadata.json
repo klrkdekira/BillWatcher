@@ -1,0 +1,32 @@
+{
+  "year": 2001,
+  "bill": "D.R 37/2001 - Supply Bill 2002 (Passed)",
+  "id": "0_2001_30",
+  "children": [
+    {
+      "text": "D.R 37/2001",
+      "id": "0_2001_30_1"
+    },
+    {
+      "text": "First reading:",
+      "id": "0_2001_30_2"
+    },
+    {
+      "text": "The second reading:",
+      "id": "0_2001_30_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_2001_30_3"
+    },
+    {
+      "text": "Passed At:",
+      "id": "0_2001_30_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_2001_30_3"
+    }
+  ],
+  "document": "/files/billindex/pdf/2001/Bill DR 37.pdf"
+}

@@ -1,0 +1,32 @@
+{
+  "year": 1999,
+  "bill": "D.R.04/1999 - Tourism Vehicles Licensing Bill 1999 (Passed)",
+  "id": "0_1999_3",
+  "children": [
+    {
+      "text": "D.R.04/1999",
+      "id": "0_1999_3_1"
+    },
+    {
+      "text": "First reading:",
+      "id": "0_1999_3_2"
+    },
+    {
+      "text": "The second reading:",
+      "id": "0_1999_3_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_1999_3_3"
+    },
+    {
+      "text": "Passed At:",
+      "id": "0_1999_3_2"
+    },
+    {
+      "text": "Presented by:",
+      "id": "0_1999_3_3"
+    }
+  ],
+  "document": "/files/billindex/pdf/1999/DR041999E.pdf"
+}
