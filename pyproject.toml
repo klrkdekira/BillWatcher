@@ -26,6 +26,7 @@ dependencies = [
     "chromadb>=0.5.5",
     "llama-index-vector-stores-chroma>=0.2.0",
     "pysqlite3-binary>=0.5.3.post1",
+    "streamlit>=1.37.1",
 ]
 
 [build-system]

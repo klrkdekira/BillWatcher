@@ -12,6 +12,13 @@ RUN --mount=type=cache,target=/root/.cache/uv \
     && apk add --no-cache --virtual .build-deps gcc musl-dev postgresql-dev \
     && uv sync --frozen --no-dev \
     && uvx --from build pyproject-build --installer uv
+#     && uv sync --frozen --no-dev 
+
+# ENV STREAMLIT_UI_HIDE_TOP_BAR=1
+# ENV STREAMLIT_SERVER_PORT=8000
+# ENV STREAMLIT_SERVER_ADDRESS=0.0.0.0
+
+# CMD ["uv", "run", "streamlit", "run", "cli/app.py"]
 
 FROM python:3.12.5-alpine3.20 
 

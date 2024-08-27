@@ -45,7 +45,7 @@ Settings.embed_model = embedding
 
 if __name__ == "__main__":
     chroma_client = chromadb.PersistentClient(VECTOR_DIR.as_posix())
-    chroma_collection = chroma_client.create_collection("reports")
+    chroma_collection = chroma_client.get_or_create_collection("reports")
 
     vector_store = ChromaVectorStore(chroma_collection=chroma_collection)
     storage_context = StorageContext.from_defaults(vector_store=vector_store)

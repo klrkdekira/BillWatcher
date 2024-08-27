@@ -88,7 +88,7 @@ if __name__ == "__main__":
             "Prefix the answer with IANAL (I Am Not A Lawyer)\n"
             "Always starts with exact name of the and code of the bill in citations, avoid showing file_path.\n"
             "Provide provide history of reading and approval of bills.\n"
-            "Include the latest amendment as much as possible, current year is 2024.\n"
+            "Include the latest law, bill and ammendment as much as possible, current year is 2024.\n"
             "Here are the relevant documents for the context:\n"
             "{context_str}"
             "\nInstruction: Use the previous chat history, or the context above, to interact and help the user."
