@@ -3,7 +3,7 @@ name = "billwatcher"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.10"
 dependencies = [
     "minio>=7.2.8",
     "starlette>=0.38.2",
@@ -25,8 +25,22 @@ dependencies = [
     "llama-index-llms-ollama>=0.3.0",
     "chromadb>=0.5.5",
     "llama-index-vector-stores-chroma>=0.2.0",
-    "pysqlite3-binary>=0.5.3.post1",
     "streamlit>=1.37.1",
+    "llama-index-vector-stores-qdrant>=0.3.0",
+    "llama-index-readers-file>=0.2.0",
+    "llama-index-embeddings-fastembed>=0.2.0",
+    "llama-index-llms-openai>=0.2.0",
+    "qdrant-client>=1.11.1",
+    "fastembed>=0.3.6",
+    "llama-index-embeddings-huggingface>=0.3.1",
+    "llama-index-embeddings-instructor>=0.2.1",
+    "transformers>=4.44.2",
+    "optimum[exporters]>=1.17.1",
+    "sentence-transformers>=2.7.0",
+    "einops>=0.8.0",
+    "instructorembedding>=1.0.1",
+    "llama-index-embeddings-huggingface-optimum>=0.2.0",
+    "llama-index-finetuning>=0.2.0",
 ]
 
 [build-system]
@@ -35,6 +49,12 @@ build-backend = "hatchling.build"
 
 [tool.uv]
 dev-dependencies = ["ruff>=0.6.1", "mypy>=1.11.2"]
+python-downloads = "automatic"
+python-preference = "only-managed"
+concurrent-builds = 4
+concurrent-downloads = 4
+concurrent-installs = 4
+compile-bytecode = true
 
 [tool.setuptools.package-data]
 "billwatcher" = ["py.typed"]

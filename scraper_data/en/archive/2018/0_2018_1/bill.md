@@ -1,3 +1,33 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b90a845292c77e0f52a5156cb6843ace4ec676ad70330edb3b44ee1b226e2ee9
-size 815
+---
+Year: 2018
+Bill: D.R. 2/2018 - Malaysian Anti-Corruption Commission (Amendment) Bill 2018 (Passed)
+Title: D.R. 2/2018 - Malaysian Anti-Corruption Commission (Amendment) Bill 2018 (Passed)
+Download URL: https://www.parlimen.gov.my/files/billindex/pdf/2018/D.R%202_2018%20-%20eng.pdf
+URL: https://www.parlimen.gov.my/files/billindex/pdf/2018/D.R%202_2018%20-%20eng.pdf
+---
+---
+Reading:
+D.R. 2/2018
+First reading:26/03/2018
+The second reading:04/04/2018
+Presented by:YB Datuk Seri Razali bin Ibrahim - Tim. Men JPM
+Passed At:04/04/2018
+Presented by:YB Datuk Seri Razali bin Ibrahim - Tim. Men JPM
+---
+
+-----
+
+-----
+
+-----
+
+-----
+
+-----
+
+-----
+
+-----
+
+-----
+

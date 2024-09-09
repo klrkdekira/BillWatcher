@@ -3,6 +3,10 @@ __pycache__
 dist
 data
 .venv
+.git
 .mypy_cache
 .vscode
 archive
+vector_data
+vector_data_new
+scraper_data

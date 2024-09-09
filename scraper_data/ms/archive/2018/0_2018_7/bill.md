@@ -1,3 +1,47 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5a67fea3323d83e622b45e709845b1ccb74bcd2122cbfe279d58831c41f886ee
-size 847
+---
+Year: 2018
+Bill: D.R. 8/2018 - RUU Perkhidmatan Bomba (Pindaan) 2018 (Lulus)
+Title: D.R. 8/2018 - RUU Perkhidmatan Bomba (Pindaan) 2018 (Lulus)
+Download URL: https://www.parlimen.gov.my/files/billindex/pdf/2018/D.R.%208_2018%20-%20bm.pdf
+URL: https://www.parlimen.gov.my/files/billindex/pdf/2018/D.R.%208_2018%20-%20bm.pdf
+---
+---
+Reading:
+D.R. 8/2018
+Bacaan Pertama Pada:29/03/2018
+Bacaan Kedua Pada:04/04/2018
+Dibentang Oleh:YB Tan Sri Noh Bin Haji Omar- Menteri KPKT
+Diluluskan Pada:04/04/2018
+Dibentang Oleh:YB Tan Sri Noh Bin Haji Omar- Menteri KPKT
+---
+
+-----
+
+-----
+
+-----
+
+-----
+
+-----
+
+-----
+
+-----
+
+-----
+
+-----
+
+-----
+
+-----
+
+-----
+
+-----
+
+-----
+
+-----
+

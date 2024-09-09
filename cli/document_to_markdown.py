@@ -1,3 +1,4 @@
+import json
 from typing import Any
 
 import anyio
@@ -5,6 +6,7 @@ import pymupdf
 import pymupdf4llm
 
 from billwatcher.config import traverse_bill
+from billwatcher.types import flatten_metadata
 
 METADATA_FILE = "metadata.json"
 DOCUMENT_FILE = "bill.pdf"
@@ -28,6 +30,13 @@ async def main(*args: Any, **kwargs: Any) -> None:
             print(f"empty pdf file {pdf_path}, skipping")
             continue
 
+        metadata_path = bill / METADATA_FILE
+        markdown_path = bill / MARKDOWN_FILE
+
+        if markdown_path.exists() and markdown_path.stat().st_size > 0:
+            print(f"skipping {bill}, already processed")
+            continue
+
         print(f"processing {bill}")
 
         try:
@@ -36,14 +45,11 @@ async def main(*args: Any, **kwargs: Any) -> None:
             print(f"empty file {pdf_path}, skipping")
             continue
 
-        metadata_path = bill / METADATA_FILE
         async with await anyio.open_file(metadata_path, "r") as f:
-            metadata = await f.read()
+            metadata = json.loads(await f.read())
 
-        markdown_path = bill / MARKDOWN_FILE
         async with await anyio.open_file(markdown_path, "w") as f:
-            await f.write(metadata)
-            await f.write("\n\n")
+            await f.write(flatten_metadata(metadata))
             await f.write(md)
 
 

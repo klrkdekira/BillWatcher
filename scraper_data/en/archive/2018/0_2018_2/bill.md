@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f3871696250948d6326068f5f55d425dd93c8e8ad8006d6eacf9a83c75da558b
-size 242
+---
+Year: 2018
+Bill: D.R. 3/2018 - Civil Law (Amendment) Bill 2018 ( Ditarik Balik )
+Title: D.R. 3/2018 - Civil Law (Amendment) Bill 2018 ( Ditarik Balik )
+Download URL: https://www.parlimen.gov.my/files/billindex/pdf/2018/D.R.%203_2018%20-%20eng.pdf
+URL: https://www.parlimen.gov.my/files/billindex/pdf/2018/D.R.%203_2018%20-%20eng.pdf
+---
+---
+Reading:
+---
+
+-----
+
+-----
+
+-----
+
+-----
+
+-----
+
+-----
+

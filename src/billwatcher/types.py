@@ -2,6 +2,8 @@ import enum
 from dataclasses import dataclass
 from typing import List, TypedDict
 
+import httpx
+
 
 class Language(enum.Enum):
     EN = "en"
@@ -31,3 +33,24 @@ class Metadata(TypedDict):
     id: str
     children: List[DocumentChild]
     document: str
+
+
+def flatten_metadata(metadata: Metadata) -> str:
+    text = "---\n"
+    text += f"Year: {metadata['year']}\n"
+    text += f"Bill: {metadata['bill']}\n"
+    text += f"Title: {metadata['bill']}\n"
+
+    link = str(httpx.URL(f"https://www.parlimen.gov.my{metadata['document']}"))
+    text += f"Download URL: {link}\n"
+    text += f"URL: {link}\n"
+    text += "---\n"
+
+    text += "---\n"
+    text += "Reading:\n"
+    for child in metadata["children"]:
+        text += f"{child['text']}\n"
+    text += "---\n"
+    text += "\n"
+
+    return text

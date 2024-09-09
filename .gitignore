@@ -45,3 +45,6 @@ billwatcher/files/
 .vscode
 data
 compose.override.yml
+vector_data
+vector_data_new
+pipeline_storage

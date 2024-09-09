@@ -1,3 +1,399 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:93e05b07408c012e849825b9f4d765c47d137efc714981b7ad2d631055862ca3
-size 13326
+---
+Year: 2017
+Bill: D.R.33/2017 - RUU Membaharui Undang-Undang (Perkahwinan dan Perceraian) ( Pindaan) 2017 (Lulus)
+Title: D.R.33/2017 - RUU Membaharui Undang-Undang (Perkahwinan dan Perceraian) ( Pindaan) 2017 (Lulus)
+Download URL: https://www.parlimen.gov.my/files/billindex/pdf/2017/WJW008878%20BM.pdf
+URL: https://www.parlimen.gov.my/files/billindex/pdf/2017/WJW008878%20BM.pdf
+---
+---
+Reading:
+D.R.33/2017
+Bacaan Pertama Pada:08/08/2017
+Bacaan Kedua Pada:09/08/2017
+Dibentang Oleh:YB Dato' Sri Azalina binti Dato' Othman Said - Menteri Di Jabatan Perdana Menteri
+Diluluskan Pada:09/08/2017
+Dibentang Oleh:YB Dato' Sri Azalina binti Dato' Othman Said - Menteri Di Jabatan Perdana Menter
+---
+
+_Membaharui Undang-Undang_ 1
+
+_(Perkahwinan dan Perceraian) (Pindaan)_
+
+**D.R. 33/2017**
+
+RANG UNDANG-UNDANG
+
+_b e r n a m a_
+
+Suatu Akta untuk meminda Akta Membaharui Undang-Undang
+(Perkahwinan dan Perceraian) 1976.
+
+[ ]
+
+**DIPERBUAT oleh Parlimen Malaysia seperti yang berikut:**
+
+**Tajuk ringkas dan permulaan kuat kuasa**
+
+**1. (1) Akta ini bolehlah dinamakan Akta Membaharui**
+Undang-Undang (Perkahwinan dan Perceraian) (Pindaan) 2017.
+
+(2) Akta ini mula berkuat kuasa pada tarikh yang ditetapkan
+oleh Menteri melalui pemberitahuan dalam _Warta._
+
+**Pindaan seksyen 3**
+
+**2. Akta Membaharui Undang-Undang (Perkahwinan dan**
+Perceraian) 1976 [Akta 164], yang disebut “Akta ibu” dalam Akta
+ini, dipinda dalam subseksyen 3(3)—
+
+_(a) dengan menggantikan perkataan “yang di hadapannya suatu_
+
+petisyen perceraian telah dibuat di bawah seksyen 51
+
+
+-----
+
+2 _Rang Undang-Undang_
+
+daripada” dengan perkataan “daripada mempunyai bidang
+kuasa eksklusif atas pembubaran sesuatu perkahwinan dan
+semua perkara yang berbangkit daripada itu termasuklah”;
+dan
+
+_(b) dengan menggantikan perkataan “atas petisyen daripada_
+
+satu pihak kepada suatu perkahwinan jika pihak yang satu
+lagi itu telah masuk Islam, dan dekri itu adalah, walau
+apa pun undang-undang bertulis lain yang berlawanan,
+sah terhadap pihak kepada perkahwinan itu yang telah
+masuk Islam sedemikian itu” dengan perkataan “atau
+perintah lain di bawah Bahagian VII dan Bahagian VIII
+bagi suatu petisyen perceraian di bawah seksyen 53 yang
+satu pihak masuk Islam selepas petisyen difailkan atau
+selepas dekri diisytiharkan, atau suatu petisyen perceraian
+di bawah seksyen 51, 52 atau 53 bagi petisyen oleh
+salah satu pihak atau kedua-dua pihak kepada suatu
+perkahwinan yang satu pihak telah masuk Islam, dan
+dekri itu dan perintah yang dibuat adalah, walau apa
+pun undang-undang bertulis lain yang berlawanan, sah
+terhadap pihak kepada perkahwinan itu yang telah masuk
+Islam sedemikian itu”.
+
+**Pindaan seksyen 12**
+
+**3. Subseksyen 12(1) Akta ibu dipinda—**
+
+_(a) dalam perenggan_ _(a), dengan memasukkan selepas_
+
+perkataan “bapanya” perkataan “atau ibunya”;
+
+_(b) dalam perenggan (b), dengan memotong perkataan “atau_
+
+bapanya telah mati”; dan
+
+_(c) dengan menggantikan perenggan_ _(c)_ dengan perenggan
+
+yang berikut:
+
+“(c) jika orang itu ialah seorang anak angkat, bapa
+
+angkatnya atau ibu angkatnya; atau”.
+
+
+-----
+
+_Membaharui Undang-Undang_ 3
+
+_(Perkahwinan dan Perceraian) (Pindaan)_
+
+**Pindaan seksyen 51**
+
+**4. Seksyen 51 Akta ibu dipinda—**
+
+_(a) dengan menggantikan subseksyen (1) dengan subseksyen_
+
+yang berikut:
+
+“(1) Jika satu pihak kepada sesuatu perkahwinan
+telah masuk Islam—
+
+_(a) salah satu pihak boleh mempetisyen untuk_
+
+perceraian di bawah seksyen ini atau
+seksyen 53; atau
+
+_(b) kedua-dua pihak boleh mempetisyen untuk_
+
+perceraian di bawah seksyen 52.”;
+
+_(b) dalam subseksyen (2)—_
+
+(i) dengan memasukkan selepas perkataan “membubarkan
+
+perkahwinan itu” perkataan “atau pada bila-bila
+masa,”; dan
+
+(ii) dengan memasukkan selepas perkataan “jika
+
+ada,” perkataan “di bawah Bahagian VII dan
+Bahagian VIII”; dan
+
+_(c) dalam subseksyen (3), dengan menggantikan perkataan_
+
+“di bawah seksyen ini” dengan perkataan “jika satu
+pihak telah masuk Islam”.
+
+**Seksyen baharu 51a**
+
+**5. Akta ibu dipinda dengan memasukkan selepas seksyen 51**
+seksyen yang berikut:
+
+“Harta suami isteri selepas penukaran agama
+
+**51a. (1) Jika seseorang yang telah masuk Islam mati sebelum**
+perkahwinan bukan Islam yang orang itu ialah suatu pihak
+telah dibubarkan, aset perkahwinan orang itu hendaklah
+
+
+-----
+
+4 _Rang Undang-Undang_
+
+dibahagikan oleh mahkamah antara pihak-pihak berkepentingan
+mengikut peruntukan seksyen ini apabila permohonan dibuat
+oleh mana-mana pihak berkepentingan.
+
+(2) Dalam menjalankan kuasa yang diberikan oleh
+subseksyen (1), mahkamah hendaklah memberi perhatian
+terhadap—
+
+_(a) takat sumbangan yang telah diberikan oleh_
+
+pihak-pihak berkepentingan itu dalam bentuk
+wang, harta atau kerja terhadap pemerolehan aset
+perkahwinan itu atau pembayaran perbelanjaan untuk
+faedah keluarga;
+
+_(b) apa-apa hutang yang terhutang oleh si mati dan pihak_
+
+berkepentingan yang telah dilakukan bagi faedah
+bersama mereka;
+
+_(c) takat sumbangan kepada kebajikan keluarga dengan_
+
+menjaga rumah atau menyayangi keluarga;
+
+_(d) tempoh perkahwinan itu;_
+
+_(e) keperluan anak-anak, jika ada, daripada perkahwinan_
+
+itu; dan
+
+_(f) hak pihak berkepentingan di bawah Akta_
+
+Pembahagian 1958 [Akta 300] jika si mati belum
+menukar agama.
+
+(3) Bagi maksud seksyen ini, “pihak berkepentingan” atau
+“pihak-pihak berkepentingan” ertinya pasangan yang menakat
+dan anak-anak yang menakat daripada sesuatu perkahwinan,
+jika ada, dan ibu bapa pasangan yang telah menukar agama
+yang telah meninggal dunia.”.
+
+**Pindaan seksyen 76**
+
+**6. Seksyen 76 Akta ibu dipinda—**
+
+_(a) dalam subseksyen (1), dengan memotong perkataan “dengan_
+
+usaha bersama mereka”;
+
+
+-----
+
+_Membaharui Undang-Undang_ 5
+
+_(Perkahwinan dan Perceraian) (Pindaan)_
+
+_(b) dalam subseksyen (2)—_
+
+(i) dalam perenggan (a), dengan memasukkan selepas
+
+perkataan “aset itu” perkataan “atau pembayaran
+perbelanjaan untuk faedah keluarga”;
+
+(ii) dengan memasukkan selepas perenggan (a) perenggan
+
+yang berikut:
+
+“(aa) takat sumbangan yang telah diberikan oleh
+
+pihak lain yang tidak memperoleh aset itu
+untuk kebajikan keluarga dengan menjaga
+rumah atau menyayangi keluarga;”;
+
+(iii) dalam perenggan (c), dengan menggantikan koma
+
+di hujung perenggan itu dengan koma bernoktah;
+dan
+
+(iv) dengan memasukkan selepas perenggan (c) perenggan
+
+yang berikut:
+
+“(d) tempoh perkahwinan itu;”; dan
+
+_(c) dengan memotong subseksyen (3) dan (4)._
+
+**Pindaan seksyen 95**
+
+**7. Seksyen 95 Akta ibu dipinda—**
+
+_(a) dengan memasukkan selepas perkataan “hilang upaya dari_
+
+segi jasmani atau otak” perkataan “atau sedang mengikuti
+pelajaran atau latihan lanjut atau lebih tinggi”; dan
+
+_(b) dengan memasukkan selepas perkataan “tidak lagi berada_
+
+dalam keadaan hilang upaya itu” perkataan “atau selesai
+pelajaran atau latihan lanjut atau lebih tinggi itu”.
+
+
+-----
+
+6 _Rang Undang-Undang_
+
+**Peralihan**
+
+**8. Apa-apa tindakan atau prosiding yang bermula atau belum selesai**
+sebaik sebelum tarikh permulaan kuat kuasa Akta ini hendaklah,
+selepas tarikh permulaan kuat kuasa Akta ini, diteruskan di bawah
+peruntukan Akta ibu sebagaimana yang dipinda oleh Akta ini.
+
+HURAIAN
+
+Rang Undang-Undang ini bertujuan untuk meminda Akta Membaharui
+Undang-Undang (Perkahwinan dan Perceraian) 1976 (“Akta 164”) secara amnya
+sebagai salah satu langkah untuk menyelesaikan isu yang berbangkit daripada
+kemasukan Islam suatu pihak kepada sesuatu perkahwinan.
+
+Rang Undang-Undang ini bertujuan untuk memberikan hak kepada suami atau
+
+isteri yang telah memeluk agama Islam untuk memfailkan petisyen perceraian
+untuk membubarkan perkahwinan sivilnya di bawah subseksyen 51(1) Akta 164.
+Pada masa ini, undang-undang tidak memberi kepada suami atau isteri yang
+memeluk agama Islam hak untuk memfailkan petisyen perceraian di mahkamah
+sivil di bawah Akta 164 memandangkan hak untuk membubarkan perkahwinan
+hanya diberikan kepada suami atau isteri yang tidak memeluk agama Islam.
+Oleh yang demikian, selagi suami atau isteri yang tidak memeluk agama Islam
+tidak memfailkan petisyen perceraian di mahkamah sivil, perkahwinan sivil
+suami isteri itu masih dianggap sah dan berterusan di bawah Akta 164.
+
+Memandangkan suami atau isteri yang memeluk agama Islam tidak mempunyai
+
+hak untuk memfailkan petisyen perceraian di bawah Akta 164, dia juga tidak
+mempunyai hak untuk membuat permohonan relief sampingan yang lain seperti
+nafkah, hak jagaan anak, pembahagian aset perkahwinan dan sebagainya.
+Keadaan ini mengakibatkan kesulitan kepada suami atau isteri yang memeluk
+agama Islam memandangkan Akta 164 tidak memperuntukkan remedi kepada
+mereka dan terdapat sebilangan daripada mereka mendapatkan remedi yang
+lain dengan cara memfailkan permohonan perceraian dan relief sampingan yang
+lain di Mahkamah Syariah. Dalam keadaan tersebut, Mahkamah Syariah akan
+menjalankan kuasanya untuk membuat perintah berhubung dengan perceraian
+dan juga relief sampingan yang lain. Konflik akan berlaku sekiranya kedua-dua
+suami isteri tersebut membuat permohonan masing-masing di dua mahkamah
+yang berbeza iaitu mahkamah sivil dan Mahkamah Syariah serta kedua-dua
+Mahkamah tersebut membuat perintah yang berbeza.
+
+Walaupun Mahkamah Syariah boleh memberikan perintah perceraian dan
+
+relief sampingan, ia tidak boleh membubarkan perkahwinan sivil di bawah
+Akta 164 kerana kuasa untuk membubarkan perkahwinan sivil di bawah Akta 164
+hanya diberikan kepada mahkamah sivil. Oleh yang demikian, Mahkamah Syariah
+tidak mempunyai bidang kuasa untuk membubarkan perkahwinan tersebut dan juga
+membuat perintah bagi relief sampingan yang lain dan perintah perceraian serta
+relief sampingan yang lain itu tidak mempunyai kesan di sisi undang-undang.
+
+
+-----
+
+_Membaharui Undang-Undang_ 7
+
+_(Perkahwinan dan Perceraian) (Pindaan)_
+
+Perkara ini telah diputuskan oleh Mahkamah Persekutuan dalam kes Viran a/l
+Nagapan v. Deepa a/p Subramaniam [Civil Appeal No. : 02(f)-4-01-2015(N)],
+Peguam Negara Malaysia dan Ketua Polis Negara v. Deepa a/p Subramaniam
+
+[Civil Appeal No. : N-02-801-05-2004 & N-02-1004-06-2014], Subashini a/p
+Rajasingam v. Saravanan a/l Thangatoray & other appeals [2008] 2 MLJ 147
+dan Tang Sung Mooi v. Too Miew Kim [1994] 3 MLJ 117 dan oleh Mahkamah
+Tinggi dalam kes Shamala a/p Sathiyaseelan v. Dr. Jeyaganesh a/l C. Mogarajah
+
+[2004] 2 MLJ 241, Kung Lim Siew (P) v. Choong Chee Kuan [2003] 6 MLJ
+260 dan Teh Siew Choo v. Teo Eng Hua [1999] 6 CLJ 308.
+
+2. _Fasal 1 mengandungi tajuk ringkas dan peruntukan permulaan kuat kuasa_
+Akta yang dicadangkan.
+
+3. _Fasal 2 bertujuan untuk meminda subseksyen 3(3) Akta 164 untuk_
+membolehkan sesuatu pihak kepada sesuatu perkahwinan yang telah masuk
+Islam atau kedua-dua pihak untuk menyerahkan petisyen perceraian di hadapan
+mahkamah sivil di bawah Akta 164. Pada masa sekarang, hak untuk menyerahkan
+petisyen perceraian hanya diberikan kepada pihak yang tidak masuk Islam.
+Orang yang masuk Islam tidak boleh memohon perceraian di bawah
+Akta/Enakmen Undang-Undang Keluarga Islam kerana Mahkamah Syariah
+tidak mempunyai bidang kuasa untuk membicarakan apa-apa kes jika pihak
+bukan Islam terlibat.
+
+4. _Fasal 3 bertujuan untuk meminda subseksyen 12(1) Akta 164 untuk_
+memberikan hak yang sama rata dalam memberikan persetujuan bagi perkahwinan
+kepada ibu atau ibu angkat seseorang yang di bawah umur 21 tahun, sama
+seperti yang diberikan kepada bapa.
+
+5. _Fasal 4 bertujuan untuk meminda subseksyen 51(1) Akta 164 untuk_
+membolehkan sesuatu pihak kepada sesuatu perkahwinan yang telah masuk
+Islam atau kedua-dua pihak untuk menyerahkan petisyen perceraian.
+
+6. _Fasal 5 dipinda untuk memasukkan seksyen baharu 51a ke dalam Akta 164_
+untuk memastikan bahawa waris terdekat orang yang masuk Islam yang
+kemudiannya meninggal dunia sebelum perkahwinan bukan Islam itu dibubarkan
+berhak kepada aset perkahwinan itu. Dalam membuat pembahagian itu,
+mahkamah hendaklah mengambil kira takat sumbangan yang telah diberikan
+terhadap pemerolehan aset itu, hutang yang terhutang, tempoh perkahwinan
+itu dan keperluan anak-anak.
+
+7. _Fasal 6 bertujuan untuk meminda seksyen 76 untuk membenarkan mahkamah_
+untuk mengambil kira bayaran perbelanjaan untuk faedah keluarga, takat
+sumbangan yang telah diberikan oleh pihak lain yang tidak memperoleh aset
+itu untuk kebajikan keluarga dengan menjaga rumah atau menyayangi keluarga
+dan tempoh perkahwinan itu, bagi maksud kesamarataan pembahagian aset
+perkahwinan.
+
+8. _Fasal 7 bertujuan untuk meminda seksyen 95 Akta 164 untuk melanjutkan_
+tempoh perintah nafkah jika seorang anak mengikuti pelajaran atau latihan
+lanjut atau lebih tinggi.
+
+
+-----
+
+8 _Rang Undang-Undang_
+
+9. _Fasal 8 memperuntukkan bagi peruntukan peralihan yang berhubung_
+
+dengan apa-apa tindakan atau prosiding yang bermula atau belum selesai
+sebaik sebelum tarikh permulaan kuat kuasa Akta ini iaitu tindakan atau
+prosiding tersebut hendaklah diteruskan mengikut peruntukan di bawah Akta
+ibu sebagaimana yang dipinda oleh Akta ini.
+
+_IMPLIKASI KEWANGAN_
+
+Rang Undang-Undang ini akan melibatkan Kerajaan dalam perbelanjaan wang
+tambahan yang amaunnya belum dapat ditentukan sekarang ini.
+
+[PN(U2)2724]
+
+
+-----
+

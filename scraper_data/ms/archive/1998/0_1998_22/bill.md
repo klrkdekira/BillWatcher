@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e7f5b8dfeb3f4108bd5133e2a888eadf7d23a1faba8ce3ccba198c024f1810b9
-size 712
+---
+Year: 1998
+Bill: D.R.29/1998 - Rang Undang-Undang Institut Penyelidikan dan Kemajuan Pertanian Malaysia (Pindaan) 1998 (Lulus)
+Title: D.R.29/1998 - Rang Undang-Undang Institut Penyelidikan dan Kemajuan Pertanian Malaysia (Pindaan) 1998 (Lulus)
+Download URL: https://www.parlimen.gov.my/files/billindex/pdf/1998/DR291998.pdf
+URL: https://www.parlimen.gov.my/files/billindex/pdf/1998/DR291998.pdf
+---
+---
+Reading:
+D.R.29/1998
+Bacaan Pertama Pada:
+Bacaan Kedua Pada:
+Dibentang Oleh:
+Diluluskan Pada:
+Dibentang Oleh:
+---
+
+-----
+
+-----
+
+-----
+
+-----
+
+-----
+

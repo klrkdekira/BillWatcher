@@ -2,5 +2,5 @@
 # http://curl.haxx.se/rfc/cookie_spec.html
 # This is a generated file!  Do not edit.
 
-www.parlimen.gov.my	FALSE	/	FALSE		GENPRO_SESSION	v1dnb4jto6ss2alm4d1c3q9oq3
-www.parlimen.gov.my	FALSE	/	FALSE	1756209343	cookiesession1	678B28672DD8485042784CF38A6D8EF1
+www.parlimen.gov.my	FALSE	/	FALSE		GENPRO_SESSION	un91vm6k52rjjm5eijogq6nvt5
+www.parlimen.gov.my	FALSE	/	FALSE	1757166718	cookiesession1	678B2867680FB1E6D435B8B16F5F1304
