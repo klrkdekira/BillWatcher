@@ -23,6 +23,7 @@ ENV STREAMLIT_SERVER_ADDRESS=0.0.0.0
 
 COPY . .
 
-RUN uv sync --frozen --no-dev 
+RUN --mount=type=cache,target=/root/.cache/uv \
+    uv sync --frozen --no-dev 
 
-CMD ["uv", "run", "streamlit", "run", "cli/app.py"]
+CMD ["uv", "run", "streamlit", "run", "scripts/app.py"]
